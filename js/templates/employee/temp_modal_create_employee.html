@@ -1,0 +1,86 @@
+<!-- Modal -->
+                <div class="modal fade" id="modalCreateEmployee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                             <form id="form-add-employee">
+
+                                <div class="modal-dialog">
+                                
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h6 class="modal-title" id="myModalLabel">Create new employee</h6>
+                                        </div>
+
+                                        <div class="modal-body">
+
+                                              <label>
+                                                  firstname:
+                                                  <input type="text" name="firstname" id="firstname" placeholder="Enter firstname" class="form-control" />
+                                              </label>
+
+                                              <label>
+                                                  middlename:
+                                                  <input type="text" name="middlename" id="middlename" placeholder="Enter middlename" class="form-control" />
+                                              </label>
+
+                                              <label>
+                                                  lastname:
+                                                  <input type="text" name="lastname" id="lastname" placeholder="Enter lastname" class="form-control" />
+                                              </label>
+
+                                              <label>
+                                                  Positions:
+                                                  <select class="form-control" name="position" id="position" style="width: 250px">
+                                                      <option>Select Position</option>
+                                                  </select> 
+                                              </label>
+
+                                              <label>
+                                                  Location:
+                                                  <select class="form-control" name="location" id="location" style="width: 250px">
+                                                      <option>Select Location</option>
+                                                  </select> 
+                                              </label>
+
+                                              <label>
+                                                  Gender:
+                                                  <select class="form-control" name="gender" id="gender" style="width: 250px">
+                                                      <option value="">Select gender</option>
+                                                      <option value="1">Male</option>
+                                                      <option value="2">Female</option>
+                                                  </select>
+                                              </label>
+                                              
+                                              <label>
+                                                  Rice allowance:
+                                                  <select class="form-control" name="rice_allowance" id="rice-allowance" style="width: 250px">
+                                                      <option value="" selected disabled>Select</option>
+                                                      <option value="1">Enable</option>
+                                                      <option value="2">Disable</option>
+                                                  </select>
+                                              </label>
+
+                                              <label >
+                                                  Rate per day:
+                                                  <input type="text" name="rpd" id="rpd" placeholder="Enter rate" class="form-control" />
+                                              </label>
+
+                                        </div>
+
+                                        <div class="modal-footer">
+                                        <div id="output-save-employee" style="position: absolute"></div>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-info" id="btnSaveEmployee">Save Employee</button>
+                                        </div>
+
+                                      </form>
+                                      
+                                    </div>
+                                    <!-- /.modal-content -->
+                                
+                                </div>
+                                <!-- /.modal-dialog -->
+
+                            </div>
+                            <!-- /.modal -->

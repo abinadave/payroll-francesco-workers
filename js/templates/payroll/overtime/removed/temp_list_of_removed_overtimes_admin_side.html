@@ -1,0 +1,23 @@
+<% var total_net = 0, net = 0 %>
+<% library.forEach(function(model) { %>
+<% net = overtime_payrollemps.function.getTotal(model.id) %>
+<% total_net += Number(net) %>
+  <tr>
+      <td width="1" class="text-center">
+           <a href="#restoreThisRemovedOvertime/<%= model.id %>" data-index="<%= model.id %>" class="text-danger"><span class="glyphicon glyphicon-repeat"></span></a>
+      </td>
+      <td width="1" class="text-center">
+           <a href="#overtime/removed/show/<%= model.id %>" data-index="<%= model.id %>" class="text-info"><span class="glyphicon glyphicon-folder-open"></a>
+      </td>
+      <td><%= model.location_name %></td>
+      <td><%= model.work_scope.toUpperCase() %></td>
+      <td class="text-center"><%= moment(model.date).format('MMMM DD, YYYY') %></td>
+      <td class="text-center"><%= overtime_payrollemps.where({payroll_id: model.id }).length %></td>
+      <td class="text-right"><%= Accounting.formatMoney(net, '', 2) %></td>
+      <td><%= model.person %></td>
+  </tr>
+<% }); %>
+<tr style="font-weight: bolder; font-size: 15px">
+   <td colspan="6" class="text-center">Total Net</td>
+   <td class="text-right"><%= Accounting.formatMoney(total_net, 'Php ', 2) %></td><td>-</td>
+</tr>

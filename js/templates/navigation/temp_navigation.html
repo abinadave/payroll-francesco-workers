@@ -1,0 +1,74 @@
+<div class="" id="temp-navigation">
+        <div class="navbar-header">
+       <!--  <img src="images/default/eci_logo.jpg" style="width: 50px; height: 50px; padding: 5px" class="img-rounded"> -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <img src="images/favico.jpg" style="width: 60px; height: 50px; border-radius: 5px" class="pull-left">
+          <a class="navbar-brand" href="#">
+            Francesco Inc.
+          </a>
+        </div>
+      
+        <div class="navbar-collapse collapse">
+         
+          <ul class="nav navbar-nav" id="remove-this">
+            <% if(sessionStorage.getItem('usertype') === '2'){ %>
+
+                 <li><a href="#Employees"><i class="fa fa-user"></i>All Employees</a></li>
+
+                 <li>
+                    <a href="#Attendance"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp; Attendance</a>
+                 </li>
+                 <li>
+                    <a href="#Project"><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp; Location</a>
+                 </li>
+                 <li style="padding: 10px">
+                  <div class="btn-group">
+                    <button class="btn btn-inverse btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                      Payroll <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#Payroll">Weelky Payroll</a></li>
+                      <li><a href="#RemovedPayroll">Previous Payroll</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#overtimePayroll">Overtime Payroll</a></li>
+                      <li><a href="#removedOvertimePayrolls">Previous Overtime</a></li>
+                    </ul>
+                  </div>
+                 </li>
+            <% }else { %>
+                <li><a href="#Payroll">Payroll</a></li>
+                <li><a href="#RemovedPayroll">Previous Payroll</a></li>
+                <li class="divider"></li>
+                <li><a href="#overtimePayroll">Overtime</a></li>
+                <li><a href="#removedOvertimePayrolls">Previous Overtime</a></li>
+                <li>
+                   <a href="#Logs"><span class="fa fa-history"></span>&nbsp;&nbsp; User Activity</a>
+                </li>
+            <% } %>
+          </ul>
+
+             <p class="navbar-text">Signed in as <span id="sign-in-as">--</span></p>
+             <p class="navbar-text"><img id="image-account" src="images/default/default.png" alt="..." class="img-thumbnail pull-right" style="width: 53; height: 47px; min-width: 53px; min-height: 47px; position: absolute; margin-top: -12.3px; cursor: pointer"></p>
+
+          <ul class="nav navbar-nav navbar-right">
+
+           <li class="dropdown" id="remove-this-2">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> Option <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li id="for-secretary"><a href="#Accounts"><span class="glyphicon glyphicon-user"></span> Accounts</a></li>
+                <li id=""><a href="#ChangePassword"><span class="glyphicon glyphicon-lock"></span> Change password</a></li>
+                <li id="for-secretary"><a href="#Rice-Allowance"><span class="glyphicon glyphicon-user"></span> Rice Allowance</a></li>
+                <li id="for-secretary"><a href="#LimitOfAbsents"><span class="glyphicon glyphicon-user"></span> Limit of Absents</a></li>
+                <li><a href="#Logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+              </ul>
+            </li>
+            
+            <% if(sessionStorage.getItem('usertype') == 'employee'){ %>
+               <li><a href="#Logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+            <% } %>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>

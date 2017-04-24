@@ -1,0 +1,4 @@
+<option value="" disabled selected id="default-select">Select position</option>
+<% library.forEach(function(model) { %>
+   <option value="<%= model.id %>"><%= model.name.toUpperCase() %></option>
+<% }); %>

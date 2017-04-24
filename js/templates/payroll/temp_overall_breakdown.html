@@ -1,0 +1,100 @@
+                            <div class="modal fade" id="modalPayrollBreakdown" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" style="width: 70%">
+                                    <div class="modal-content">
+                                                
+                                                        <div class="col-lg-12">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    Payroll Overall Breakdown
+                                                                </div>
+                                                                <!-- /.panel-heading -->
+                                                                <div class="panel-body">
+                                                                    <!-- Nav tabs -->
+                                                                    <ul class="nav nav-pills">
+                                                                        <li class="active"><a href="#home-pills" data-toggle="tab">Total</a>
+                                                                        </li>
+                                                                        <a href="#printOvertimeBreakdown" class="pull-right"><span class="fa fa-print"></span></a>
+                                                                        <li><a href="#profile-pills" data-toggle="tab">Breakdown</a>
+                                                                        </li>
+                                                                       
+                                                                    </ul>
+                                        
+                                                                    <!-- Tab panes -->
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane fade in active" id="home-pills">
+                                                                        <h6 style="margin-top: -10px">Payroll Breakdown</h6>
+                                                                            <table id="table-overall-payroll-breakdown" class="table table-hover table-bordered table-striped" style=" margin-top: 20px; font-size: 14px">
+                                                                                 <thead>
+                                                                                     <tr>
+                                                                                         <th class="text-center">Location</th>
+                                                                                         <th class="text-center">Date</th>
+                                                                                         <th class="text-right">Total</th>
+                                                                                     </tr>
+                                                                                 </thead>
+                                                                                 <!-- <tbody id="list-of-payroll-overall"></tbody> -->
+                                                                                 <tbody>
+                                                                                     <% var totalnet = 0 %>
+                                                                                     <% library.forEach(function(model){ %>
+                                                                                        <tr>
+                                                                                           <td class="text-center"><%= model.location %></td>
+                                                                                           <td class="text-center"><%= model.date_from %> - <%= model.date_to %></td>
+                                                                                           <td class="text-right" style="font-style: italic"><%= accounting.formatMoney(model.net, ' ', 2) %></td>
+                                                                                        </tr>            
+                                                                                        <% totalnet += Number(model.net) %>     
+                                                                                     <% }) %>
+                                                                                     <tr>
+                                                                                         <td colspan="2" style="font-weight: bolder" class="text-center">Total</td>
+                                                                                         <td style="font-weight: bolder; font-size: 17px" class="text-danger text-right"><%= accounting.formatMoney(totalnet, ' ', 2) %></td>
+                                                                                     </tr>
+                                                                                 </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div class="tab-pane fade" id="profile-pills">
+                                                                        <hr/>
+                                                                            <ul class="list-group">
+                                                                              <li class="list-group-item">
+                                                                                <span class="badge"><%= pbreakdowns.function.breakdown(500) %></span>
+                                                                                500
+                                                                              </li>
+                                                                              <li class="list-group-item">
+                                                                                <span class="badge"><%= pbreakdowns.function.breakdown(100) %></span>
+                                                                                100
+                                                                              </li>
+                                                                              <li class="list-group-item">
+                                                                                <span class="badge"><%= pbreakdowns.function.breakdown(50) %></span>
+                                                                                50
+                                                                              </li>
+                                                                              <li class="list-group-item">
+                                                                                <span class="badge"><%= pbreakdowns.function.breakdown(20) %></span>
+                                                                                20
+                                                                              </li>
+                                                                              <li class="list-group-item">
+                                                                                <span class="badge"><%= pbreakdowns.function.breakdown(10) %></span>
+                                                                                10
+                                                                              </li>
+                                                                              <li class="list-group-item">
+                                                                                <span class="badge"><%= pbreakdowns.function.breakdown(5) %></span>
+                                                                                5
+                                                                              </li>
+                                                                              <li class="list-group-item">
+                                                                                <span class="badge"><%= pbreakdowns.function.breakdown(1) %></span>
+                                                                                1
+                                                                              </li>
+                                                                             
+                                                                            </ul>
+                                                                        </div>
+                                                                      
+                                                                    </div>
+                                                                </div>
+                                                                <!-- /.panel-body -->
+                                                            </div>
+                                                            <!-- /.panel -->
+                                                        </div>
+                                                        <!-- /.col-lg-6 -->
+                                                    
+
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>

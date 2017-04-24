@@ -1,0 +1,51 @@
+
+    <div class="modal fade" id="modalUpdatePicture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 55%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <div id="upload-pic" style="display: inline">upload</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <a class="text-primary" style="cursor: pointer" id="printId">Print ID</a>
+                </div>
+                <div id="for-printing">
+                 <div class="modal-body">
+                     <div style="margin-top: 0px; width: 400px; display: inline-block; padding: 10px">
+                         <div class="panel panel-default" style="padding: 15px">
+                            <div style="width: 700px">
+                               <img style="width: 353px; height: 58px" src="images/id/header-2.png">
+                               <p style="color: #02000D; position: absolute; margin-left: 130px; margin-top: 7px; font-family: Couture; font-weight: bolder; font-size: 18px">
+                                   <%= model.lastname %>,
+                               </p>
+                               <p style="position: absolute; margin-left:130px; margin-top: 44px; font-family: Couture; font-weight: bolder; font-size: 14px">
+                                   <%= model.middlename %>
+                               </p>
+                               <p style="position: absolute; margin-left: 130px; margin-top: 28px; font-family: Couture; font-weight: bolder; font-size: 14px">
+                                   <%= model.firstname %>
+                               </p>
+                               <p style="position: absolute; color: #02000D; margin-left: 205px; margin-top: 70px; font-size: 11px">Signature of personnel</p>
+                               <br>
+                               <p style="font-weight: bolder; position: absolute; color: #02000D; margin-left: 229px; margin-top: 85px; font-size: 13px">801-<%= fn.zeroPad(Number(pictures.functions.getLowerId(model)), 4) %></p>
+                               <img id="img-src" class="img-rounded" style="width: 120px; height: 110px; margin-top: 8px; margin-left: 5px" src="" />
+                               <p style="position: absolute; color: #02000D; margin-left: 13px; margin-top: 7px; font-size: 10px; font-weight: bolder">VALID UNTIL DEC 2017</p>
+                               <div class="text-center">
+                               <h3 style="padding: 3px; font-family: Couture; width: 353px; color: white; background-color: #E3000E !important; color: white !important;; font-size: 11px; border-radius: 2px; -webkit-print-color-adjust: exact;"><%= positions.function.getName(model.position) %></h3>
+                               </div>
+                            </div>
+                         </div>
+
+                         <div class="panel panel-default" style="padding: 15px">
+                            <div id="load-img-here"></div>
+                            <div style="width: 700px; height: 220px">
+                                <img class="pull-left img-rounded" style="width: 353px; height: 194px" src="images/id/certification.png">
+                            </div>
+                         </div>
+                     </div>
+
+                 </div>
+                </div>
+                <div class="modal-footer" style="border-color: transparent">                    
+                </div>
+            </div>
+        </div>
+    </div>

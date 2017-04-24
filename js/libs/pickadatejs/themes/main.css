@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* ========================================================================== $CONTENTS ========================================================================== */
+/** VARIABLES.................. MIXINS..................... IMPORTS.................... BASE.......................Base stylings TYPOGRAPHY................. CODE-BLOCKS................ FORM-ELEMENTS.............. BUTTONS.................... LISTS...................... MENUS...................... GROUPS.....................Group sets of content TABLES..................... SECTIONS...................Blocks of content TARGETS....................Page focus targets RAINBOW....................Syntax highlighting TEXT-HELPERS............... DEMOS...................... */
+/* ========================================================================== $IMPORTS ========================================================================== */
+/* ========================================================================== $VARIABLES ========================================================================== */
+/** Font families */
+/** Colors */
+/* #cbe7b6 */
+/* #d9d9d9 */
+/* #ededed */
+/* #bfbfbf */
+/* #ababab */
+/* #eeeec5 */
+/** Widths */
+/* 300px */
+/* 540px */
+/* 740px */
+/** Transitions */
+/* ========================================================================== $MIXINS ========================================================================== */
+/** Lists */
+
+/*.-fieldset-demo { margin-top: 0; padding: 1em; background: #f8faf9; border: 1px solid #ededed; border-top: 0; border-radius: 0 0 4px 4px; padding-top: 30px; position: relative; }
+.fieldset--demo .fieldset__button { margin-bottom: 1em; margin-right: 1em; }
+.button--small { padding: 0.5em 1em; font-size: .8em; }
+*/
+
+

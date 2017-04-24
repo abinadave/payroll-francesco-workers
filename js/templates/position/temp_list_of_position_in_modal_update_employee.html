@@ -1,0 +1,4 @@
+<option disabled value="">select position</option>
+<% library.forEach(function(model) { %>
+    <option value="<%= model.id %>" id="update-position-<%= model.id %>"></a><%= model.name %></option>
+<% }); %>

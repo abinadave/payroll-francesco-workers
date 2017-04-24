@@ -1,0 +1,89 @@
+    
+                            <div class="modal fade" id="modalUpdateEmployee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                                <div class="modal-dialog" style="width: 600px; margin-top: 100px">
+
+                                    <div class="modal-content">
+
+                                        <form id="form-update-employee">
+
+                                        <div class="modal-header">
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                                            <h6 class="modal-title" id="myModalLabel">Update employee</h6>
+
+                                        </div>
+
+                                        <div class="modal-body">
+                                             <label>
+                                                  firstname:
+                                                  <input type="text" name="firstname" id="firstname" placeholder="Enter firstname" class="form-control" />
+                                              </label>
+                                              <label>
+                                                  middlename:
+                                                  <input type="text" name="middlename" id="middlename" placeholder="Enter middlename" class="form-control" />
+                                              </label>
+                                              <label>
+                                                  lastname:
+                                                  <input type="text" name="lastname" id="lastname" placeholder="Enter lastname" class="form-control" />
+                                              </label>
+                                            
+                                              <label>
+                                                  Positions:
+                                                  <select class="form-control" name="position" id="update-position" style="width: 250px">
+                                                      <option>Select Position</option>
+                                                  </select> 
+                                              </label>
+                                              <label>
+                                                  Location:
+                                                  <select class="form-control" name="location" id="location" style="width: 250px">
+                                                      <option>Select Location</option>
+                                                  </select> 
+                                              </label>
+                                              <label>
+                                                  Gender:
+                                                  <select class="form-control" name="gender" id="gender" style="width: 250px">
+                                                      <option value="">Select gender</option>
+                                                      <option value="1" id="male">Male</option>
+                                                      <option value="2" id="female">Female</option>
+                                                  </select>
+                                              </label>     
+                                              
+                                              <label>
+                                                  Rice allowance:
+                                                  <select class="form-control" name="rice_allowance" id="rice-allowance" style="width: 250px">
+                                                      <option value="1" id="era">Enable</option>
+                                                      <option value="2" id="dra">Disable</option>
+                                                  </select>
+                                              </label>
+
+
+                                              <label>
+                                                  Rate per day:
+                                                  <input type="text" name="rpd" id="rpd" placeholder="Enter rate" class="form-control" />
+                                              </label>
+
+                                              <div id="upload-update"></div>
+                                              <input type="hidden" name="pid" id="hidden-emp-id-update">
+                                              
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div id="output-update-photo-employee" style="position: absolute"></div>
+                                            <div id="output-update-employee" style="position: absolute"></div>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button  type="submit" id="btnEditEmployee" class="btn btn-primary btn-info">Save changes</button>
+                                        </div>
+
+
+
+                                      </form>
+
+
+
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->

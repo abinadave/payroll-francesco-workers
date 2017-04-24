@@ -1,0 +1,10 @@
+<% if(library.length == 0) { %>
+<option disabled selected>Nothing to select</option>
+<% }else { %>
+
+  <option disabled selected>Select employee</option>
+  <% library.forEach(function(model) { %>
+     <option value="<%= model.id %>"><%= model.lastname %>, <%= model.firstname %> <%= model.middlename %></option>
+  <% }) %>
+
+<% } %>

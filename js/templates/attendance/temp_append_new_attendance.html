@@ -1,0 +1,38 @@
+<tr id="tr-att-<%= model.id %>">
+       <td><a href="#removeFromAttendance/<%= model.id %>"><span class="glyphicon glyphicon-remove"></span></a></td>
+       <td><%= model.id %></td>
+       <td><%= employees.function.getFullname(model) %></td>
+       <td style="text-align: center" id="tnod-<%= model.id %>">0</td>
+
+        <% value.forEach(function(dates) { %>
+              <% var dt = moment(dates) %>
+                <% if(dt.format('dddd') !== "Sunday") { %>
+
+                    <% for (var i = 0; i <= 1; i++) { %>
+                        <% if(i == 0) { %>  
+                           <% var unique_id = model.id +'-'+ dt.format('MMMM-DD-YYYY') +'-AM' %>
+                          
+                           <% if(presents.function.isUphold > 0) { %>
+                               <% presents.function.saveNewInDB(unique_id) %>
+                           <% }else { %>
+                               <% presents.add({id: unique_id, value: 0}, {silent: true}) %>
+                           <% } %> 
+                           <td style="text-align: center" data-toggle="tooltip" data-placement="left" title="<%= employees.function.getFullname(model) %>">
+                                <input type="checkbox" id="<%= model.id %>-<%= dt.format('MMMM-DD-YYYY') %>-AM" value="<%= model.id %>">
+                           </td>
+                        <% }else { %> 
+                           <% var unique_id = model.id +'-'+ dt.format('MMMM-DD-YYYY') +'-PM' %> 
+                           <% if(presents.function.isUphold > 0) { %>
+                               <% presents.function.saveNewInDB(unique_id) %>
+                           <% }else { %>
+                               <% presents.add({id: unique_id, value: 0}, {silent: true}) %>
+                           <% } %>
+                           <td style="text-align: center" data-toggle="tooltip" data-placement="left" title="<%= employees.function.getFullname(model) %>">
+                                <input type="checkbox" id="<%= model.id %>-<%= dt.format('MMMM-DD-YYYY') %>-PM" value="<%= model.id %>">
+                           </td>
+                        <% } %> 
+                    <% } %>
+                     
+                <% } %>
+          <% }) %>
+</tr>

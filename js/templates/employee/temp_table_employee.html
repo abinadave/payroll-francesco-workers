@@ -1,0 +1,111 @@
+<div class="col-md-2 pull-left">
+<div class="panel panel-default">
+   <div class="panel-heading" style="font-size: 13.5px">
+      Employee
+    </div>
+      <div class="panel-body" style="text-align: center">
+            <img src="images/default/default.png" style="width: 120px; height: 103px; border-radius: 5px" id="image-employee" class="img-thumbnail">
+      </div>
+      <div class="panel-footer" style="font-size: 15px; text-align: center">
+        <span id="employee-fullname" class="text-mute" style="font-weight: bolder; font-size: 11px">Fullname</span> 
+  </div>
+</div>
+</div>
+
+              <div class="col-lg-10">
+              
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Employee Lists
+                             <input type="text" id="search-emp" placeholder="Search employee here" class="form-control input-sm pull-right" style="width: 250px; margin-top: -5px" autofocus>
+                        </div>
+                                
+                                 <div class="panel-body" style="">       
+
+                                   <div id="placeholder-online-users" style="display: none"></div>
+                                   
+                                 <div style="margin-top: -8px">
+                                 Location
+                                 <select id="display-by-project" style="width: 300px; cursor: pointer">
+                                     <option>Select location</option>
+                                 </select>
+                                 <br>
+
+                                 Position&nbsp;
+                                 <select id="display-by-designation" style="width: 300px; cursor: pointer">
+                                     <option>Select designation</option>
+                                 </select>
+
+                                 <!-- <button id="btnUpdateImage" class="btn btn-xs btn-primary" style="margin-left: 30px; margin-top: -10px">show image <span class="glyphicon glyphicon-user"></span></button> -->
+
+                                    <div class="pull-right" id="for-secretary" style="margin-top: -6px">
+                                        <button style="margin-right: 10px; margin-top: 0px" id="btnCa" class="btn btn-primary btn-xs" >
+                                             <i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;C/A
+                                        </button>
+
+                                       &nbsp;&nbsp;&nbsp;
+
+                                         <button style="margin-top: 0px; margin-left: -15 0px" id="btnCreateEmployee" class="btn btn-primary btn-xs" >
+                                             <i class="fa fa-user-plus"></i>&nbsp;&nbsp;&nbsp;Hire
+                                         </button>
+
+                                        &nbsp;&nbsp;&nbsp;
+                                        
+                                        <button style="margin-right: 10px; margin-top: 0px" id="btnUpdateEmployee" class="btn btn-primary btn-xs" >
+                                             <i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;update
+                                        </button>
+
+                                        <span id="for-secretary">
+                                            <button id="btnCreateAttendance" class="btn btn-xs pull-right btn-success">
+                                            <i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Attendance
+                                            </button>
+                                             <button style="margin-right: 10px; margin-right: 10px" type="button" id="btnOvertimePayroll" class="btn btn-xs btn-success pull-right"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp;Overtime </button>
+                                        </span>  
+
+                                    </div>
+
+                                      
+                                 </div>
+
+                                
+                                <div id="div-overflow" style="overflow: scroll; margin-top: 20px">
+                                
+                                        <table class="table table-bordered table-hover" style="font-size: 12px" id="table-employee">
+                                        
+                                           <tr style="cursor: pointer">
+                                               <th width="1" ><input type="checkbox" name="" id="check-all-employee"/></th>
+                                               <th width="1" id="th-id">Id</th>
+                                               <th width="400" id="th-fullname">Fullname </th>
+                                               <th style="text-align: right" id="th-rpd">Rate per day</th>
+                                               <th style="text-align: center">Designation</th>
+                                               <th style="text-align: center">Gender</th>
+                                               <th style="text-align: center">Location</th>
+                                               <!-- <th width="20"></th> -->
+                                               <th width="1"></th>
+                                          </tr>
+
+                                           <tbody id="list-of-employees" style="cursor: pointer">
+                                              <tr>
+                                                  <td colspan="9"><i class='fa fa-circle-o-notch fa-spin fa-fw'></i><span class='sr-only'>Loading...</span> Collecting information.....</td>                                                       
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                </div>
+                        </div>
+
+                        <div class="panel-footer" style="background-color: #DED7E6">
+                             <span style="font-size: 10px">PayrollSystem</span>                              
+                        </div>
+
+                    </div>
+                </div>
+
+<div>
+  <div id="placeholder-modal-create-employee"></div>
+  <div id="placeholder-modal-update-employee"></div>
+  <div id="placeholder-modal-upload-employee"></div>
+  <div id="placeholder-modal-create-payroll"></div>
+  <div id="placeholder-modal-chat"></div>
+  <div id="output-save-debt"></div>
+  <input type="hidden" name="hidden_emp_id" id="hidden-emp-id" />
+</div>

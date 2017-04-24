@@ -1,0 +1,9 @@
+<% library.forEach(function(model) { %>
+    <tr>
+        <td width="1"><input type="checkbox" value="<%= model.id %>"></td>
+        <td><%= moment(model.from_date).format('dddd MMMM DD, YYYY') %></td>
+        <td><%= moment(model.to_date).format('dddd MMMM DD, YYYY') %></td>
+        <td><%= model.loc_name %></td>
+        <td><a href="#printSavedAttendance/<%= model.id %>"><span class="fa fa-print"></span></a></td>
+    </tr>
+<% }); %>

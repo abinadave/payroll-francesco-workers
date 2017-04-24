@@ -1,0 +1,24 @@
+    <% library.forEach(function(model) { %>
+       <div>
+           <div style="width: 700px">
+              <img style="width: 603px; height: 125px" src="images/id/header-2.png">
+              <p style="color: #02000D; position: absolute; margin-left: 170px; font-family: Couture; font-weight: bolder; font-size: 34px">
+                 <%= model.lastname %>
+              </p>
+              <p style="position: absolute; margin-left: 170px; margin-top: 35px; font-family: Couture; font-weight: bolder; font-size: 26px">
+                 <%= model.firstname %>
+              </p>
+              <p style="position: absolute; color: #02000D; margin-left: 360px; margin-top: 95px; font-size: 13px">Signature of personel</p>
+              <p style="font-weight: bolder; position: absolute; color: #02000D; margin-left: 384px; margin-top: 115px; font-size: 18px">801-<%= fn.zeroPad(Number(model.id), 4) %></p>
+              <% var src = pictures.functions.getImgSrc(model) %>
+              <img src="<%= src %>" class="img-rounded" style="width: 140px; height: 140px; margin-left: 13px; margin-top: 10px" />
+              <div class="text-center">
+              <h3 style="padding: 3px; font-family: Couture; width: 603px; color: white; background-color: #E3000E !important; color: white !important;; font-size: 25px; border-radius: 2px"><%= positions.function.getName(model.position) %> </h3>
+              </div>
+           </div>
+           <div style="width: 700px; page-break-after: always;">
+               <img class="pull-left img-rounded" style="width: 604px; height: x309px" src="images/id/certification.png">
+           </div>
+       </div>
+    <% }); %>
+          

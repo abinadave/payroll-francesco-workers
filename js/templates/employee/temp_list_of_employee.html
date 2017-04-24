@@ -1,0 +1,15 @@
+<% library.forEach(function(model) { %>
+<tr id="<%= model.id %>">
+   <td><input type="checkbox" name="" value="<%= model.id %>" /></td>
+   <!-- <td><a href="#updatePicture/<%= model.id %>">update pic</a></td> -->
+   <td><%= model.id %></td>
+   <td><%= model.lastname%>, <%= model.firstname %> <%= model.middlename %></td>
+   <td style="text-align: right"><%= accounting.formatMoney(model.rpd, " ", 2) %></td>
+   <td style="text-align: center"><%= positions.function.getName(model.position) %></td>
+   <td style="text-align: center"><%= employees.function.getGender(model.gender) %></td>
+   <td style="text-align: center"><%= projects.function.getLocation(model.location) %></td>
+   <!-- <td></td> -->
+<!-- <td style="text-align: center"><a href="#updateImage/<%= model.id %>" title="click to update employee photo">image</a></td> -->
+   <td ><a href="#remove-employee/<%= model.id %>"><span class="glyphicon glyphicon-remove text-danger"></span></a</td>
+</tr>
+<% }); %>

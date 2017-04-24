@@ -1,0 +1,3 @@
+<% library.forEach(function(model) { %>
+    <li class="list-group-item"><%= employees.function.getFullname(model.emp) %> <a id="<%= model.emp %>" class="pull-right text-danger" style="cursor: pointer"><span class="glyphicon glyphicon-refresh"></span></a></li>
+<% }); %>

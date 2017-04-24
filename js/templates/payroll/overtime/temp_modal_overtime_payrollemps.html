@@ -1,0 +1,53 @@
+
+                            <div class="modal fade" id="modalOvertimePayrollemps" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" style="width: 55%">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" id="btnPrint" class="btn btn-info btn-xs"><span class="fa fa-print"></span>&nbsp;&nbsp;Table</button>
+                                            <button type="button" id="envPrint" class="btn btn-info btn-xs"><span class="fa fa-print"></span>&nbsp;&nbsp;Evelope</button>
+                                            <button type="button" id="btnRestore" class="btn btn-info btn-xs">Restore</button>
+                                            <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>
+                                        </div>
+
+                                        <div class="modal-body" id="print-div">
+
+                                             <div>
+                                             <div class="text-center">
+                                                    <span style="font-size: 13px" id="location"></span><br/>
+                                                    <span style="font-size: 13px" id="date"></span>
+                                             </div>
+                                             
+                                                <table id="table-overtime-payrollemps" class="table table-bordered table-condensed table-hover" 
+                                                style="font-size: 12px">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th width="30" class="text-center">NO.</th>
+                                                                    <th width="200">FULLNAME</th>
+                                                                    <th  class="text-center">DESIGNATION</th>
+                                                                    <th width="75" class="text-center">RATE PER DAY</th>
+                                                                    <th width="75" class="text-center">RATE PER HOUR</th>
+                                                                    <th width="75" class="text-center">NO. OF HOURS</th>
+                                                                    <th width="75" class="text-center">NO. OF MINUTES</th>
+                                                                    <th width="40"  class="text-right">AMOUNT</th>
+                                                                    <th width="30" class="text-center">NO.</th>
+                                                                    <th id="remove-this" class="signature-overtime"></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="list-of-overtime-payrollemps"></tbody>
+                                                 </table>
+                                             </div>   
+
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+
+
+                               
+               

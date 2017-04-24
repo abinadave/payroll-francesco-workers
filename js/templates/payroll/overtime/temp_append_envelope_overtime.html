@@ -1,0 +1,85 @@
+<% library.forEach(function(model) { %>
+<% var payroll = overtime_payrolls.get(model.payroll_id).toJSON() %>
+<% var salary = parseFloat(model.hrs) * parseFloat(model.rph) %>
+<% var hrs = (parseFloat(model.hrs) > 1) ? 'hrs' : 'hr' %>
+<% var breakdown = overtime_payrolls.function.getIndividualBreakdown(model) %>
+<%= console.log(breakdown) %>
+    <div class="panel panel" style="width: 800px; padding: 15px; page-break-after: always">
+         <ul class="list-group" style="border-color: white">
+          
+            <table class="table table-hover" style="font-size: 13px">
+                <thead>
+                     <tr>
+                         <th style="border-color: transparent"><%= payroll.location_name %></th>
+                         <th style="border-color: transparent" class="text-right"><%= moment(payroll.date).format('MMMM DD, YYYY') %></th>
+                     </tr>
+                      <tr>
+                         <th style="border-color: transparent"><%= model.lastname + ' ' + model.firstname %></th>
+                         <th style="border-color: transparent" class="text-right"><%= moment(payroll.date).format('dddd') %></th>
+                     </tr>
+                     <tr>
+                         <th style="border-color: transparent"><%= model.designation.toUpperCase() %></th>
+                     </tr>
+                </thead>
+            </table>
+
+         </ul>
+         
+         <table class="table table-hover" style="font-size: 13px" id="tbl-totality">
+           <thead>
+              <tr>
+                  <th width="450" style="border-color: transparent" class="text-center">
+                  <%= payrolls.function.transformNoOfDays(model.hrs) %></span>&nbsp;&nbsp; <%= hrs %> &nbsp;&nbsp;x&nbsp;&nbsp; <%= model.rph %> &nbsp;&nbsp;&nbsp;<%= accounting.formatMoney(Math.floor(salary),'Php ',0) %></th>
+                  <th style="border-color: transparent" class="text-left">
+                      BREAKDOWN
+                  </th>
+              </tr>   
+              <tr>
+                  <th style="border-color: transparent" class="text-center"></th>
+                  <th style="border-color: transparent" class="text-left">
+                      500 x <%= breakdown[500] %>
+                  </th>
+              </tr>
+              <tr>
+                  <th style="border-color: transparent" class="text-center"></th>
+                  <th style="border-color: transparent" class="text-left">
+                      100 x <%= breakdown[100] %>
+                  </th>
+              </tr>
+              <tr>
+                  <th style="border-color: transparent" class="text-center"></th>
+                  <th style="border-color: transparent" class="text-left">
+                      50 x <%= breakdown[50] %>
+                  </th>
+              </tr>
+              <tr>
+                  <th style="border-color: transparent" class="text-center"></th>
+                  <th style="border-color: transparent" class="text-left">
+                      20 x <%= breakdown[20] %>
+                  </th>
+              </tr>
+              <tr>
+                  <th style="border-color: transparent" class="text-center"></th>
+                  <th style="border-color: transparent" class="text-left">
+                      10 x <%= breakdown[10] %>
+                  </th>
+                  <tr>
+                  <th style="border-color: transparent" class="text-center"></th>
+                  <th style="border-color: transparent">
+                      5 x <%= breakdown[5] %>
+                  </th>
+                  <tr>
+                  <th style="border-color: transparent" class="text-center"></th>
+                  <th style="border-color: transparent">
+                      1 x <%= breakdown[1] %>
+                  </th>
+              </tr>
+              </tr>
+              </tr>
+            </thead>          
+         </table>  
+
+    </div>                               
+
+
+<% }); %>

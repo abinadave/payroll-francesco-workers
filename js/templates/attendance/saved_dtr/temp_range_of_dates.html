@@ -1,0 +1,63 @@
+<tr>
+    <th width="1" rowspan="3">Nos</th>
+    <th width="225" rowspan="3" id="am-pm">Fullname</th>
+    <th width="100" rowspan="3" id="am-pm">No. of days</th>
+      <% value.forEach(function(model) { %>
+           <% var dt = moment(model) %>
+           <% if(dt.format('dddd') !== "Sunday") { %>
+               <th width="200" colspan="2" id="am-pm"><%= dt.format('dddd' ) %> </th>
+           <% } %>
+         
+    <% }) %>
+</tr>
+
+<tr>
+    <% value.forEach(function(model) { %>
+          <% var dt = moment(model) %>
+          <% if(dt.format('dddd') !== "Sunday") { %>
+              <th id="am-pm">AM</th><th id="am-pm">PM</th>
+          <% } %>
+    <% }) %>
+</tr>
+
+<tr>
+    <% value.forEach(function(model) { %>
+          <% var dt = moment(model) %>
+          <% if(dt.format('dddd') !== "Sunday") { %>
+               <th colspan="2" id="am-pm" class="text-danger"><%= dt.format('DD') %> </th>
+          <% } %>
+    <% }) %>
+</tr>
+
+<% var numbering = 0 %>
+<% library.forEach(function(model) { %>
+
+    <tr>
+       <td class="text-primary"><%= ++numbering %></td>
+       <td><%= model.fullname %></td>
+       <td id="nod-<%= model.emp %>-<%= model.payroll_id %>" style="text-align: center; font-weight: bolder"><%= attendances.function.getNumOfDays(model.num_of_days) %></td>
+
+          <% value.forEach(function(dates) { %>
+              <% var dt = moment(dates) %>
+                <% if(dt.format('dddd') !== "Sunday") { %>
+
+                    <% for (var i = 0; i <= 1; i++) { %>  
+                         <% if(i == 0) { %>
+                             <% var id = model.emp + '-' + dt.format('MMMM-DD-YYYY') + '-AM' %>
+                             <td id="<%= id %>" style="text-align: center" data-toggle="tooltip" data-placement="left">
+                                  <%= saved_dtrs.functions.findModelIfPresent(id) %>
+                             </td>
+                        <% }else { %>
+                             <% var id = model.emp + '-' + dt.format('MMMM-DD-YYYY') + '-PM' %>
+                             <td id="<%= id %>" style="text-align: center" data-toggle="tooltip" data-placement="left" title="">
+                                  <%= saved_dtrs.functions.findModelIfPresent(id) %>
+                             </td>
+                        <% } %> 
+                    <% } %>
+                     
+                <% } %>
+          <% }) %>
+    </tr>     
+      
+<% }) %>
+

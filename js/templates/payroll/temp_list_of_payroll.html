@@ -1,0 +1,56 @@
+<% var over_all_total = 0.0 %>
+<% var numbering = 0 %>
+
+<% attendances.forEach(function(model) { %>
+<% var emp = employees.get(model.get('id')) %>
+<% var total = emp.get('rpd') * model.get('num_of_days') %>
+<% var total_rice_allowance = attendances.function.getRiceAllowanceTotal() %>
+<% over_all_total+= total %>
+<% ++numbering %>
+
+  <tr id="<%= model.get('id') %>">
+
+       <td><%= numbering %></td>
+       <td><%= emp.get('lastname') %>, <%= emp.get('firstname') %> <%= emp.get('middlename') %></td>
+       <td class="text-center"><%= employees.function.getDesignation(model.get('id')).toUpperCase() %></td>
+
+       <td style="text-align: center"><%= model.get('num_of_days') %></td>
+       <td style="text-align: center"><%= accounting.formatMoney(emp.get('rpd'), " ", 2) %></td>
+       
+       <td style="font-weight: bolder; font-size: 16px; text-align: right">
+          <%= accounting.formatMoney(total, " ", 2) %>
+       </td>
+
+       <td style="text-align: center" width="100" id="<%= model.get('id') %>">
+          <input type="text" id="emp-advances" class="form-control input-sm input-advances-<%= model.get('id') %>" style="width: 100px; height: 27px" />
+       </td>
+
+       <td style="text-align: center" width="100" id="<%= model.get('id') %>">
+          <input type="text" id="emp-sss" class="form-control input-sm input-sss-<%= model.get('id') %>" style="width: 100px; height: 27px"/>
+       </td>
+
+       <td style="text-align: center" id="<%= model.get('id') %>" width="100">
+          <input type="text" id="emp-phil" class="form-control input-sm input-phil-<%= model.get('id') %>" style="width: 100px; height: 27px"/>
+       </td>
+       
+       <td style="font-weight: bolder; font-size: 16px; text-align: right" id="net-amount-<%= model.get('id') %>">
+          <%= accounting.formatMoney(total, " ", 2) %>
+       </td>
+
+  </tr>
+
+<% }) %>
+
+<tr style="font-size: 18px">
+     <td colspan="5" style="font-weight: bolder; text-align: center">OVER ALL TOTAL</td>
+     <td style="text-align: right; font-weight: bolder" id="payroll-total"><%= accounting.formatMoney(over_all_total," ",2) %></td>
+     <td style="text-align: center; font-weight: bolder" id="payroll-advances">0.00</td>
+     <td style="text-align: center; font-weight: bolder" id="payroll-sss">0.00</td>
+     <td style="text-align: center; font-weight: bolder" id="payroll-phil">0.00</td>
+     <td style="font-weight: bolder">Php <span class="pull-right" id="over-all-total"><%= accounting.formatMoney(over_all_total," ",2) %></span></td>
+</tr>
+
+<tr style="font-size: 18.5px">
+    <td colspan="9"></td>
+    <td style="text-align: right; font-weight: bolder" class="text-danger" id="over-all-total-rounded"><%= accounting.formatMoney(Math.round(over_all_total)," ",0) %></td>
+</tr>

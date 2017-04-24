@@ -1,0 +1,25 @@
+<% library.forEach(function(model) { %>
+<% var payroll = payrolls.get(model.payroll_id) %>
+
+<center style="padding: 0 auto">
+    <div class="panel panel" style="width: 800px; padding: 15px; page-break-after: always; margin-top: -40px">
+         <span class="text-right" style="left: 600px; position: absolute;"><%= payrolls.function.getPayrollDate(model.payroll_id) %></span>
+         <div style="margin-left: -650px; padding-left: 100px">
+            <span style=""><%= payroll.get('location') %></span><br/>
+            <span style="margin-top: -25px"><small><%= employees.function.getFullname(model.emp) %> </small></span><br/>
+            <span style="margin-top: -25px"><small><%= positions.function.getName(model.position).toUpperCase() %> </small></span>
+         </div>
+         <p style="position: absolute; margin: 24px 0 0 176px; font-size: 22px" class="text-primary"><small>Less: </small></p>    
+         <div class="" style="margin-top: 17px; margin-left: 100px">
+         
+             <span style="margin-bottom: 24px"><span><%= accounting.formatMoney(model.num_of_days,'',1) %></span> days X <%= model.rpd %> &nbsp; -------- &nbsp;&nbsp;&nbsp; <b><%= accounting.formatMoney(model.total,'',2) %></b></span><br/>
+             <span>C/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------------------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><b><%= model.advances %></b></span></span><br/>
+             <span>SSS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------------------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><b><%= model.sss %></b></span></span><br/>
+             <span>Philhealth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><b><%= model.phil %></b></span></span><br/>
+             <span style="margin-left: 120px">______________________________</span><br/>
+             <span style="margin-left: 175px"> <b><%= accounting.formatMoney(model.net,'Php ',2) %></b></span>
+         </div><br/><br/>
+    </div>                               
+</center>
+
+<% }); %>

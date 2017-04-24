@@ -1,0 +1,4 @@
+<option value="0" disabled selected>Select Usertype</option>
+<% library.forEach(function(model) { %>
+<option value="<%= model.id %>"><%= model.name %></option>
+<% }) %>

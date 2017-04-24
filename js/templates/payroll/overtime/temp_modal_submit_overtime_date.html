@@ -1,0 +1,32 @@
+                            <div class="modal fade" id="modalOvertimeDate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" style="width: 300px">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            Overtime payroll
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel"></h4>
+                                        </div>
+
+                                        <div class="modal-body">
+                                         <form>
+
+                                            <input type="hidden" id="location-id" name="location_id" value="<%= selected_emps.location_id %>">
+                                            <input type="hidden" id="location-name" name="location_name" value="<%= selected_emps.location_name %>">
+
+                                             <label>
+                                                Date: <br/>
+                                                <input name="date" type="text" id="date" class="form-control">
+                                             </label><br/>
+                                             <label>
+                                                Scope of Work (Required)<br/>
+                                                <input name="work_scope" type="text" id="work_scope" class="form-control">
+                                             </label><br/>
+
+                                             <button type="submit" class="btn btn-info btn-sm">Save payroll</button>
+                                         </form>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>

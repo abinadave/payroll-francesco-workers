@@ -1,0 +1,48 @@
+                           <div class="container">
+                            <div class="modal fade" id="modalTablePayroll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" style="width: auto">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <small><h6 class="modal-title" id="myModalLabel" style="font-size: 16px">
+                                               <b>PAYROLL</b>: <span id="payroll-location"></span><br/>
+                                               <b>FOR PERIOD</b>: <span id="payroll-period"></span>
+                                            </h6></small>
+                                        </div>
+                                        <div class="modal-body" id="div-table-payroll">
+                                               <table class="table table-hover table-bordered table-condensed" id="table-payroll" style="font-size: 13px">
+                                                   <thead>
+                                                      <tr>
+                                                           <th rowspan="2" width="1">NO.</th>
+                                                           <th rowspan="2">FULLNAME</th>
+                                                           <th class="text-center" rowspan="2">DESIGNATION</th>
+                                                           <th width="60"rowspan="2" style="text-align: center">NO. OF DAYS</th>
+                                                           <th width="80" rowspan="2" style="text-align: center">RATE PER DAY</th>
+                                                           <th rowspan="2" style="text-align: right">TOTAL</th>
+                                                           <th colspan="3" style="text-align: center">ADVANCES</th>
+                                                           <th rowspan="2" style="text-align: right">NET AMOUNT</th>
+                                                      </tr>    
+                                                      <tr>
+                                                           <th rowspan="1" style="text-align: center">ADVANCES</th>
+                                                           <th rowspan="1" style="text-align: center">SSS</th>
+                                                           <th rowspan="1" style="text-align: center">PHIL HEALTH</th>
+                                                      </tr>
+                                               </thead>
+                                               <tbody id="list-of-payroll" style="font-weight: bolder">
+                                               </tbody>
+                                                   
+                                               </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                             <div id="output-save-payroll" style="position: absolute"></div>
+                                             <div id="output-save-payrollemps" style="position: absolute"></div>
+                                             <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="">Close</button>
+                                             <button type="button" class="btn btn-primary" id="save-payroll" onclick="" onmouseover="console.log(1)">Save</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                           
+                            </div>

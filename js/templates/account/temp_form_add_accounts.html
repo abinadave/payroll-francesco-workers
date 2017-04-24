@@ -1,0 +1,54 @@
+<div class="container" style="margin: 20px 0 0 0">
+    <div class="col-lg-7">
+    <a href="#clear-form-add-account" class="text-info" style="font-size: 13px; margin-left: 20px">Clear all</a>
+        <form id="form-add-account">
+
+        <label>Firstname
+           <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Enter firstname">
+        </label>
+        <label>Middlename
+           <input type="text" name="middlename" id="middlename" class="form-control" placeholder="Enter middlename">
+        </label>
+        <label>Lastname
+           <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Enter lastname">
+        </label>
+        <label>Usertype
+            <select class="form-control" id="usertypes" name="usertype">
+                 <option disabled selected>Select usertype</option>
+            </select>
+        </label>
+        <label>Contact number
+           <input type="text" name="contact" id="contact" class="form-control" placeholder="Enter contact number">
+           <span id="output-contact" style="position: absolute; font-size: 14px"></span>
+        </label>
+        <label>Active Email
+           <input type="text" name="email" id="email" class="form-control" placeholder="Enter valid email">
+        </label>
+        <label>Gender
+            <select class="form-control" name="gender">
+                 <option disabled selected>Select gender</option>
+                 <option value="1">Male</option>
+                 <option value="2">Female</option>
+            </select>
+        </label>
+        <label>Address
+            <input type="text" name="address" id="address" class="form-control" placeholder="Enter current address">
+        </label>
+        <label>Username
+            <input type="text" name="username" id="username" class="form-control" placeholder="Enter Username">
+            <span id="output-username" style="position: absolute; font-size: 14px"></span>
+        </label>
+        <label>Password
+            <span id="span-password">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
+            </span>
+        </label><br/>
+        
+        <button class="btn btn-success btn-block" id="btnAddAccount" 
+        style="width: 580px; margin: 40px 0 25px 20px; font-weight: bolder">CREATE</button>
+        
+        </form>
+        
+    </div>
+     <div id="output-save-account"></div>
+</div>

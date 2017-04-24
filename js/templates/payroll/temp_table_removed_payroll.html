@@ -1,0 +1,61 @@
+                           
+                        <span style="margin-left: 20px">Previous Payrolls</span>
+                        <span style="font-size: 13px; margin-left: 30px">No. of records <span class="badge" id="no-of-rremoved-overtimes"></span></span>&nbsp;&nbsp;&nbsp;
+
+                        <div class="col-md-2 pull-right" style="margin: -4px">
+                             <div class="input-group input-group-rounded">
+                                 <span class="input-group-btn">
+                                     <button type="submit" class="btn"><span class="fui-search"></span></button>
+                                 </span>
+                                 <input type="text" class="form-control" placeholder="Search" id="search-query-removed-payrolls">
+                             </div>
+                         </div>
+                           
+                         <div style="display: inline">
+                             <button id="btnReset" class="btn btn-sm btn-default pull-right" style="margin-left: 8px">Reset</button>
+                             <button id="btnGo" class="btn btn-sm btn-warning pull-right" style="margin-left: 8px">Go</button>
+                             <label class="pull-right"><input placeholder="Date 2" style="width: 200px" type="text" class="form-control input-sm" id="filter-date-2" /></label>
+                             <label class="pull-right"><input placeholder="Date 1" style="width: 200px;" type="text" class="form-control input-sm" id="filter-date-1" /></label>
+                         </div>
+                   
+                <div class="col-lg-12">
+
+                    <div class="panel panel-default" style="padding: 15px">
+
+                            <!-- <div style="overflow: scroll" id="div-table-rpayrolls"> -->
+                            <div style="overflow: auto">
+                            
+                                    <table id="table-rpayrolls" class="table table-hover table-bordered table-condensed" style="font-size: 14px">
+                                        <thead style="cursor: pointer">
+                                         <tr>
+                                            <th width="1"><input type="checkbox" id="check-all-payroll-records"></th>
+                                            <th width="1"></th>
+                                            <th width="1"></th>
+                                            <th style="text-align: center" width="300">Location</th>
+                                            <th style="text-align: center" width="200">Date of Payroll</th>
+                                            <th style="text-align: center" width="200">From</th>
+                                            <th style="text-align: center" width="200">To</th>
+                                            <th style="text-align: center" id="total-payroll" width="100">Total</th>
+                                            <th style="text-align: center" width="100">Advances</th>
+                                            <th style="text-align: center" width="100">SSS</th>
+                                            <th style="text-align: center" width="100">PhilHealth</th>
+                                            <th style="text-align: center" width="100">Rice Allowance</th>
+                                            <th style="text-align: right" width="100">Net Amount</th>
+                                            <th style="text-align: center" width="100">Personnel</th> 
+                                         </tr>
+                                        </thead>
+
+                                        <tbody id="record-list-removed-payrolls">
+                                           <tr>
+                                               <td colspan="14">Loading data..</td>
+                                           </tr>
+                                        </tbody>
+                                         
+                                    </table>
+                            </div>
+                       
+                    </div>
+
+                </div>   
+
+                <div id="modal-placeholder-table-payrollemps"></div> 

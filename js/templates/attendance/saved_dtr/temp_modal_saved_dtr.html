@@ -1,0 +1,22 @@
+    <div class="modal fade" id="modal-saved-dtr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 80%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <label id="for-secretary">Enable editing <input type="checkbox" id="chk-enable-editing" /></label>
+                    <button type="button" style="margin-right: 20px" class="btn pull-right btn-info btn-xs" id="btnPrint"><i class="fa fa-print 2x"></i> Print</button>
+                    <button type="button" style="margin-right: 10px" class="btn pull-right btn-info btn-xs" id="btnShowPayroll"><i class="fa fa-usd"></i> Show payroll</button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-center" style="padding: 2px; margin: 0px"><%= model.location %></h6>
+                    <h6 class="text-center" style="padding: 2px; margin: 0px"><%= model.date_from %> - <%= model.date_to %></h6>
+                    <table style="font-size: 12px; margin-top: 5px" class="table table-bordered table-condensed table-hover">
+                        <tbody id="range-of-dates"></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,27 @@
+<% library.forEach(function(model) { %>
+    <div style="width: 300px; display: inline-block; padding: 10px" id="picture-<%= model.id %>">
+    <a class="pull-right for-removal" id="<%= model.id %>" style="cursor: pointer"><i class="fa fa-remove"></i> &nbsp;&nbsp;</a>
+        <div class="panel panel-default" style="padding: 15px">
+           <div id="div-pic-<%= model.id %>" onmouseleave="pictures.functions.mouseLeave(<%= model.id %>)"  onmouseenter="pictures.functions.mouseEnter(<%= model.id %>)" style="width: 700px">
+              <img style="width: 243px; height: 45px" src="images/id/header-2.png">
+              <p style="color: #02000D; position: absolute; margin-left: 53px; margin-top: 10px; font-family: Couture; font-weight: bolder; font-size: 10px">
+                 <%= model.fullname.split(' ')[1] %>
+              </p>
+              <p style="position: absolute; margin-left: 53px; margin-top: 23px; font-family: Couture; font-weight: bolder; font-size: 8px">
+                 <%= model.fullname.split(' ')[0] %>
+              </p>
+              <p style="position: absolute; color: #02000D; margin-left: 120px; margin-top: 45px; font-size: 7px">Signature of personel</p>
+              <br>
+              <img id="img-src" class="img-rounded" style="width: 40px; height: 40px; margin-top: 8px; margin-left: 5px" src="<%= pictures.functions.getImgSrc(model) %>" />
+              <div class="text-center">
+              <h3 style="padding: 3px; font-family: Couture; width: 243px; color: white; background-color: #E3000E !important; color: white !important;; font-size: 11px; border-radius: 2px"><%= pictures.functions.getPicPosition(model) %> </h3>
+              </div>
+           </div>
+           <div id="div-for-print-<%= model.id %>" onmouseenter="pictures.functions.mouseEnter(<%= model.id %>)"  style="display: none; position: absolute; margin-top: -105px; margin-left: 150px">
+              <a class="text-info" href="#printId/<%= model.id %>"><span class="fa fa-2x fa-print"></span></a>
+              <a class="text-info" href="#updatePicture2/<%= model.fullname %>"><span class="fa fa-2x fa-edit"></span></a>
+           </div>
+        </div>
+    </div>
+<% }); %>   
+   

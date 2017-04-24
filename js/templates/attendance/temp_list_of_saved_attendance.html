@@ -1,0 +1,11 @@
+
+<% library.forEach(function(model) { %>
+<%= console.log(model) %>
+<tr>
+   <td width="1"><input type="checkbox" value="<%= model.id %>"></td>
+   <td><%= moment(model.from_date).format('MMMM DD, YYYY') %> - <%= moment(model.to_date).format('MMMM DD, YYYY') %></td>
+   <td><%= model.loc_name %></td>
+   <td><a class="text-info" href="#ViewSavedAttendanceIdOf/<%= model.id %>"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;&nbsp;open</a></td>
+   <td><a href="#deleteAttendance/<%= model.id %>"><span class="glyphicon glyphicon-trash"></span></a></td>
+</tr>
+<% }); %>

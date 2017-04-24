@@ -1,0 +1,28 @@
+<div class="col-md-12">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            System logs (All transaction is monitored here)
+            <div class="pull-right" style="margin-top: -5px">filter date:
+               <input type="date" id="d1" class="form-control" style="width: 240px; display: inline"/>
+               <input type="date" id="d2" class="form-control" style="width: 240px; display: inline"/>
+               <button class="btn btn-sm btn-info" id="btnFilterGo">go</button>
+            </div>
+        </div>
+        <div class="panel-body">
+          <div style="overflow: scroll">
+            <table class="table table-hover table-condensed" style="width: 1800px; font-size: 14px">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Person</th>
+                        <th>Date</th>
+                        <th>Usertype</th>
+                    </tr>
+                </thead>
+                <tbody id="list-of-userlogs"></tbody>
+            </table>
+           </div> 
+        </div>
+    </div>
+</div>
+               

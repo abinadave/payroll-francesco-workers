@@ -1,0 +1,26 @@
+<% var total = 0, limit = 20, current = 0, num = 0, currentTotal = 0, grandTotal = 0; %>
+<% library.forEach(function(model) { %>
+<% var salary = parseFloat(model.rph) * parseFloat(model.hrs); %>
+<% ++current %>
+<% currentTotal = self.getWorkerTotalPay(model) %>
+<% grandTotal += currentTotal %>
+   <tr style="cursor: pointer" id="<%= model.id %>">
+       <td class="text-center" > <%= ++num %></td>
+       <td width="100"><%= model.lastname.toUpperCase() %>, <%= model.firstname.toUpperCase() %></td>
+       <td class="text-center" width=""><%= model.designation.toUpperCase() %></td>
+       <td class="text-center" ><%= Math.floor(model.rpd) %></td>
+       <td class="text-center" ><%= model.rph %></td>
+       <td class="text-center" ><%= model.hrs %></td>
+       <td class="text-center" ><%= model.min %></td>
+       <td style="font-weight: bold; text-align: right" ><%= accounting.formatMoney(currentTotal,' ', 2) %></td>
+       <td class="text-center" > <%= num %></td>
+       <td id="remove-this"><a href="#overtime/removePayrollemps/<%= model.id %>"><span class="glyphicon glyphicon-remove"></span></a></td>
+   </tr>
+<% total += Math.floor(salary) %>
+<% }); %>
+<tr>
+    <td colspan="7" class="text-center" style="font-weight: bolder; font-size: 15px">Total</td>
+    <td colspan="1" style="font-weight: bolder; font-size: 15px" class="text-right"><%= accounting.formatMoney(grandTotal, 'Php ', 2) %></td>
+    <td colspan="2"></td>
+</tr
+

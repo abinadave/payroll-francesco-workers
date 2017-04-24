@@ -1,0 +1,4 @@
+<option value="all" selected>Select All</option>
+<% library.forEach(function(model) { %>
+<option value="<%= model.id %>"><%= model.location.toUpperCase() %></option>
+<% }); %>

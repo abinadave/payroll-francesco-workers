@@ -1,0 +1,12 @@
+<% library.forEach(function(model) { %>
+<tr>
+    <td><%= model.activity %></td>
+    <td><%= model.person %></td>
+    <td><%= moment(model.date).format('ddd MMMM DD, YYYY')  %> &nbsp;&nbsp;(<%= moment(model.date).fromNow() %>)</td>
+    <td><%= userlogs.function.getUsertype(model.usertype) %></td>
+</tr>
+<% }); %>
+
+<tr>
+   <td colspan="6" class="text-center"><button id="btnLoadMore" class="btn btn-xs btn-primary" onclick="userlogs.function.loadMore()">Load more</button></td>
+</tr>

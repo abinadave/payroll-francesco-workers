@@ -1,0 +1,4 @@
+<option value="" disabled selected id="default-select">Select location</option>
+<% library.forEach(function(model) { %>
+<option value="<%= model.id %>" id="update-location-<%= model.id %>"><%= model.location.toUpperCase() %></option>
+<% }); %>

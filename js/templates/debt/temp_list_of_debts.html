@@ -1,0 +1,7 @@
+<% library.forEach(function(model) { %>
+<tr>
+    <td><%= model.fullname %></td>
+    <td><%= accounting.formatMoney(model.value, ' ', 2) %></td>
+    <td><button id="<%= model.id %>" class=" btn btn-xs btn-info "><span class="glyphicon glyphicon-minus"></span></button></td>
+</tr>
+<% }); %>

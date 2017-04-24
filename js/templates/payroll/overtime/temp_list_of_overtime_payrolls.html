@@ -1,0 +1,14 @@
+<% library.forEach(function(model) { %>
+   <tr id="<%= model.id %>">
+        <td><input type="checkbox" id="chk-<%= model.id %>" value="<%= model.id %>"></td>
+        <td width="50" style="padding: 10px" class="text-center"><a class="text-danger" href="#deleteOvertimePayroll/<%= model.id %>"><span class="glyphicon glyphicon-remove"></span></a></td>
+        <td width="50" style="padding: 10px" class="text-center"><a class="text-info" href="#viewOvertimePayroll/<%= model.id %>" data-index="<%= model.id %>"><span class="glyphicon glyphicon-folder-open"></span></a></td>
+        <td><%= model.location_name %></td>
+        <td ><%= model.work_scope %></td>
+        <td width="100" class="text-center"><%= model.work_hrs %></td>
+        <td class="text-center"><%= moment(model.date).format('MMMM DD, YYYY, dddd') %></td>
+        <td class="text-center"><%= overtime_payrolls.function.numOfWorkers(model.id) %></td>
+        <td><%= overtime_payrollemps.function.getTotal(model.id) %></td>
+        <td class="text-center"><%= model.person %></td>
+   </tr>
+<% }); %>

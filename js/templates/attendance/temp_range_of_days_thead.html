@@ -1,0 +1,68 @@
+<tr>
+    <th width="1" rowspan="3"></th>
+    <th width="1" rowspan="3">No</th>
+    <th width="300" rowspan="3" id="am-pm">Fullname</th>
+    <th width="100" rowspan="3" id="am-pm">No. of days</th>
+      <% value.forEach(function(model) { %>
+           <% var dt = moment(model) %>
+           <% if(dt.format('dddd') !== "Sunday") { %>
+               <th width="200" colspan="2" id="am-pm"><%= dt.format('dddd' ) %> </th>
+           <% } %>
+         
+      <% }) %>
+</tr>
+
+<tr>
+    <% value.forEach(function(model) { %>
+          <% var dt = moment(model) %>
+          <% if(dt.format('dddd') !== "Sunday") { %>
+              <th id="am-pm">AM</th><th id="am-pm">PM</th>
+          <% } %>
+    <% }) %>
+</tr>
+
+<tr>
+    <% value.forEach(function(model) { %>
+          <% var dt = moment(model) %>
+          <% if(dt.format('dddd') !== "Sunday") { %>
+               <th colspan="2" id="am-pm" class="text-danger"><%= dt.format('DD') %> </th>
+          <% } %>
+    <% }) %>
+</tr>
+
+<div id="append-new-emp-attendance-here"></div>
+<% library.forEach(function(model) { %>
+
+    <tr id="tr-att-<%= model.id %>">
+       <td><a href="#removeFromAttendance/<%= model.id %>"><span class="glyphicon glyphicon-remove"></span></a></td>
+       <td><%= model.id %></td>
+       <td><b><%= employees.function.getFullname(model) %></b></td>
+       <td style="text-align: center" id="tnod-<%= model.id %>">0</td>
+
+
+          <% value.forEach(function(dates) { %>
+              <% var dt = moment(dates) %>
+                <% if(dt.format('dddd') !== "Sunday") { %>
+
+                    <% for (var i = 0; i <= 1; i++) { %>  
+                         <% if(i == 0) { %>
+                             <% var unique_id = model.id +'-'+ dt.format('MMMM-DD-YYYY') +'-AM' %>
+                             <% presents.add({id: unique_id, value: 0}, {silent: true}) %>
+                             <td id="td-attendance" style="text-align: center" data-toggle="tooltip" data-placement="left" title="<%= employees.function.getFullname(model) %>">
+                                  <input type="checkbox" id="<%= model.id %>-<%= dt.format('MMMM-DD-YYYY') %>-AM" value="<%= model.id %>">
+                             </td>
+                        <% }else { %>
+                             <% var unique_id = model.id +'-'+ dt.format('MMMM-DD-YYYY') +'-PM' %> 
+                             <% presents.add({id: unique_id, value: 0}, {silent: true}) %>
+                             <td id="td-attendance" style="text-align: center" data-toggle="tooltip" data-placement="left" title="<%= employees.function.getFullname(model) %>">
+                                  <input type="checkbox" id="<%= model.id %>-<%= dt.format('MMMM-DD-YYYY') %>-PM" value="<%= model.id %>">
+                             </td>
+                        <% } %> 
+                    <% } %>
+                     
+                <% } %>
+          <% }) %>
+
+    </tr>     
+      
+<% }) %>

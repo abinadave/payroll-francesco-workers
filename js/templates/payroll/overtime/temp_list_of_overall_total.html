@@ -1,0 +1,16 @@
+<% var overall = 0.0 %>
+<% library.forEach(function(model) { %>
+<% var total = parseFloat(overtime_payrolls.function.getTotal(model.id)) %>
+<tr>
+    <td class="text-center"><%= model.location_name %></td>
+    <td class="text-center"><%= moment(model.date).format('ddd MMMM DD, YYYY') %></td>
+    <td class="text-right"><%= accounting.formatMoney(total," ", 0) %></td>
+</tr>
+<% overall += total %>
+<% }); %>
+
+<tr>
+    <th class="text-center" colspan="2">TOTAL</th>
+    <th class="text-right"><%= accounting.formatMoney(overall," ", 2) %></th>
+</tr>
+

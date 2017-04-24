@@ -1,0 +1,14 @@
+<% library.forEach(function(model) { %>
+    <tr id="<%= model.id %>">
+        <td><input type="checkbox" value="<%= model.id %>" id="<%= model.id %>"></td>
+        <td><%= model.id %></td>
+        <td><%= model.lastname %>, <%= model.firstname %> <%= model.middlename %></td>
+        <td><%= usertypes.function.getName(model.usertype) %></td>
+        <td><%= model.contact %></td>
+        <td><%= model.email %></td>
+        <td><%= employees.function.getGender(model.gender) %></td>
+        <td><%= model.address %></td>
+        <td><%= model.username %></td>
+        <td><%= model.password.substr(0,10) %></td>
+    </tr>
+<% }) %>

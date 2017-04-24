@@ -1,0 +1,274 @@
+[05-Apr-2016 23:31:51 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:31:51 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:32:05 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:32:05 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:38:24 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:38:24 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:38:48 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:38:48 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:38:58 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:38:58 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:00 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:00 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:01 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:01 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:01 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:01 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:11 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:11 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:12 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:12 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:12 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:12 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:13 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:13 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:13 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:13 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:14 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:14 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:14 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:14 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:14 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:14 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:27 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:27 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:27 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:27 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:28 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:28 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:28 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:28 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:29 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:29 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:29 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:29 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:46 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:46 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:48 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:48 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:49 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[05-Apr-2016 23:39:49 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 02:27:23 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 02:27:23 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 02:27:27 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 02:27:27 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 02:27:32 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 02:27:32 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:38:09 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 158
+[14-Apr-2016 21:38:09 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:158
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(158): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_removed_payrolls.php(5): Payrolls::saveRemovedPayrolls(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 158
+[14-Apr-2016 21:38:41 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 158
+[14-Apr-2016 21:38:41 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:158
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(158): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_removed_payrolls.php(5): Payrolls::saveRemovedPayrolls(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 158
+[14-Apr-2016 21:43:18 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:18 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:24 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:24 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:28 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:28 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:33 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:33 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:38 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:38 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:53 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:43:53 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:44:05 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:44:05 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:44:09 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 21:44:09 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 23:08:49 America/Denver] PHP Notice:  Undefined index: id in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[14-Apr-2016 23:08:49 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'personnel' cannot be null' in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php:19
+Stack trace:
+#0 /home5/ezjonesl/public_html/payroll/class/class.payrolls.php(19): PDOStatement->execute(Array)
+#1 /home5/ezjonesl/public_html/payroll/ajax/save/save_payroll.php(17): Payrolls::save(Array)
+#2 {main}
+  thrown in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 19
+[20-Apr-2016 00:28:28 America/Denver] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home5/ezjonesl/public_html/payroll/class/class.payrolls.php on line 31

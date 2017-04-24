@@ -1,0 +1,11 @@
+<% library.forEach(function(model) { %>
+   <tr id="<%= model.id %>">
+        <td width="1" class="text-center"><a href="#restoreThisRemovedOvertime/<%= model.id %>" data-index="<%= model.id %>"><span class="glyphicon glyphicon-repeat"></span></a></td>
+        <td><%= model.location_name %></td>
+        <td ><%= model.work_scope.toUpperCase() %></td>
+        <td class="text-center"><%= moment(model.date).format('MMMM DD, YYYY') %></td>
+        <td class="text-center"><%= overtime_payrolls.function.numOfWorkers(model.id) %></td>
+        <td><%= overtime_payrollemps.function.getTotal(model.id) %></td>
+        <td class="text-center"><%= model.person %></td>
+   </tr>
+<% }); %>

@@ -1,0 +1,42 @@
+<% self.total = 0.0, self.advances_total = 0.0, self.sss_total = 0.0, self.phil_total = 0.0, self.rice_allowance_total = 0.0, self.net = 0.0 %>
+<% library.forEach(function(model) { %>
+<tr>
+     <td><input type="checkbox" value="<%= model.id %>"></td>
+     <td title="Restore this payroll" class="text-center">
+         <a href="#Payroll/retrieve/<%= model.id %>" class="text-info"><span class="glyphicon glyphicon-repeat"></a>
+     </td>
+     <td title="Open this payroll" class="text-center">
+         <a href="#RemovedPayroll/open/<%= model.id %>" class="text-info"><span class="glyphicon glyphicon-folder-open"></a>
+     </td>
+     <td style="text-align: center"><%= model.location.toUpperCase() %></td>
+     <td style="text-align: center"><%= model.date %> <%= model.time %></td>
+     <td style="text-align: center"><%= model.date_from %></td>
+     <td style="text-align: center"><%= model.date_to %></td>
+     <td style="text-align: center"><%= Accounting.formatMoney(model.total, '', 2) %></td>
+     <td style="text-align: center"><%= Accounting.formatMoney(model.advances_total, '', 2) %></td>
+     <td style="text-align: center"><%= Accounting.formatMoney(model.sss_total, '', 2) %></td>
+     <td style="text-align: center"><%= Accounting.formatMoney(model.phil_total, '', 2) %></td>
+     <td style="text-align: center"><%= Accounting.formatMoney(model.rice_allowance_total, '', 2) %></td>
+     <td style="text-align: right"><%= Accounting.formatMoney(model.net, '', 2) %></td>
+     <td style="text-align: center"><%= accounts.function.getFullname(model.personnel) %></td>
+</tr>
+
+<% self.total += Number(model.total) %>
+<% self.advances_total += Number(model.advances_total) %>
+<% self.sss_total += Number(model.sss_total) %>
+<% self.phil_total += Number(model.phil_total) %>
+<% self.rice_allowance_total += Number(model.rice_allowance_total) %>
+<% self.net += Number(model.net) %>
+
+<% }) %>
+
+<tr>
+    <td colspan="7" class="text-center">Total</td>
+    <td class="text-center" style="font-weight: bolder; font-size: 14px"><%= Accounting.formatMoney(self.total, '', 2) %></td>
+    <td class="text-center" style="font-weight: bolder; font-size: 14px"><%= Accounting.formatMoney(self.advances_total, '', 2) %></td>
+    <td class="text-center" style="font-weight: bolder; font-size: 14px"><%= Accounting.formatMoney(self.sss_total, '', 2) %></td>
+    <td class="text-center" style="font-weight: bolder; font-size: 14px"><%= Accounting.formatMoney(self.phil_total, '', 2) %></td>
+    <td class="text-center" style="font-weight: bolder; font-size: 14px"><%= Accounting.formatMoney(self.rice_allowance_total, '', 2) %></td>
+    <td class="text-right" style="font-weight: bolder; font-size: 15px"><%= Accounting.formatMoney( self.net , '' , 2 ) %></td>
+    <td></td>
+</tr>

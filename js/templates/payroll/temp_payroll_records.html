@@ -1,0 +1,59 @@
+           <!--  <div class="container"> -->
+
+                <div class="col-lg-12">
+                    <div class="panel panel-default" id="panel-payrolls">
+                        <div class="panel-heading" style="padding: 10px">
+                        <form>
+                           <label class="label label-info">Filter date</label>
+                           <label><input id="date-from" type="text" class="form-control input-sm" placeholder="From"></label>
+                           <label><input id="date-to" type="text" class="form-control input-sm" placeholder="To"></label>
+                           <button id="btnFilter" class="btn btn-xs btn-primary" type="button">search</button>
+                           <button id="btnReset" type="reset" class="btn btn-xs btn-primary" >reset</button> &nbsp;&nbsp; | &nbsp;&nbsp;
+                           <input id="search-box" type="text" class="form-control" style="width: 20%; display: inline; border-radius: 25px" placeholder="Seach here" />
+                           <button class="btn btn-success btn-xs pull-right" id="btnOverAllBreakdown" type="button">Breakdown</button>
+                        </form>
+                        </div>
+
+                        <div class="panel-body" id="div-tbl-payroll"  style="overflow: auto">
+
+                        <table id="table-records-payroll" class="table table-hover table-bordered table-condensed" style="font-size: 14px; width: 1900px">
+                          <thead style="cursor: pointer">
+                             <tr>
+                                <th width="1"><input type="checkbox" id="check-all-payroll-records"></th>
+                                <th width="60" colspan="3"></th>
+                                <th style="text-align: center">Location</th>
+                                <th style="text-align: center">From</th>
+                                <th style="text-align: center">To</th>
+                                <th style="text-align: center" id="total-payroll">Total</th>
+                                <th style="text-align: center">Advances Total</th>
+                                <th style="text-align: center">SSS Total</th>
+                                <th style="text-align: center">PhilHealth Total</th>
+                                <!-- <th style="text-align: center">Rice Allowance Total</th> -->
+                                <th style="text-align: right">Net Amount</th>
+                                <th style="text-align: center">Date</th>
+                                <th style="text-align: center">Time</th>
+                                <th style="text-align: center">Personnel</th> 
+                             </tr>
+                          </thead>
+                          
+                          <tbody id="record-list-payroll">
+                             <tr>
+                                 <td colspan="15">Fetching data from the server, Please wait.....</td>
+                             </tr>
+                          </tbody>
+                             
+                        </table>
+
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <!-- Panel Footer -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-placeholder-table-payrollemps"></div>
+                <div id="placeholder-payroll-breakdown"></div>
+                <div id="placeholder-overall-breakdown2" ></div>
+                <div id="placeholder-modal-edit-payrollemps"></div>
+         <!--    </div> -->

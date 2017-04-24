@@ -1,0 +1,18 @@
+<% var thistotal = 0.0 %>
+<% library.forEach(function(model) { %>
+<% var net = payrolls.function.payrollTotal(model.id) %>
+<tr>
+    <td><%= model.location %></td>
+    <td><%= payrolls.function.getFromTo(model) %></td>
+    <td class="text-right"><%= accounting.formatMoney(net, ' ', 2) %></td>
+</tr>
+
+<% thistotal += net %>
+
+<% }); %>
+<tr style="font-size: 18px; font-weight: bolder">
+    <th>
+        <td colspan="1">Total</td>
+        <th class="text-right text-danger"><%= accounting.formatMoney(thistotal, 'Php ', 0) %></th>
+    </th>
+</tr>

@@ -1,0 +1,24 @@
+<% var no = 0 %>
+<% library.forEach(function(model) { %>
+<% ++no %>
+<% var total = parseFloat(model.rph) * parseFloat(model.hrs) %>
+   <tr id="<%= model.id %>">
+       <td><%= no %></td>
+       <td><%= model.lastname %>, <%= model.firstname %></td>
+       <td class="text-center"><%= model.designation.toUpperCase() %></td>
+       <td class="text-center"><input type="text" class="text-center input-hrs" id="<%= model.id %>" style="width: 70px"></td>
+       <td class="text-center"><input type="text" class="text-center input-mins" id="<%= model.id %>" style="width: 70px"></td>
+       <td class="text-primary" id="word-<%= model.id %>" style="font-size: 12px;"><%= selected_emps.function.getInitialWord(model) %></td>
+       <td class="text-center"><%= model.rpd %></td>
+       <td class="text-center"><%= model.rph %></td>
+       <td class="text-center" style="font-weight: bolder" id="emp-<%= model.id %>"><%= Math.floor(total) %></td>
+       <td><a style="cursor: pointer; text-decoration: none" id="<%= model.id %>"><span class="glyphicon glyphicon-remove"></span></a></td>
+   </tr>
+<% }); %>
+
+
+<tr>
+    <td colspan="8" class="text-center"><b>Total</b></td>
+    <td class="text-center text-danger" id="total-selected-emps" style="font-weight: bolder; font-weight: 18px"><%= selected_emps.function.getTotal() %></td>
+    <td width="1"></td>
+</tr>

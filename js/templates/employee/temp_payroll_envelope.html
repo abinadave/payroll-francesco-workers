@@ -1,0 +1,113 @@
+<% var numbering = 0 %>
+<% library.forEach(function(model) { %>
+<% var payroll = payrolls.get(model.payroll_id) %>
+<% var breakdown = payrolls.function.getIndividualBreakdown(model) %>
+<center style="margin-top: -10px">
+    <div class="panel panel" id="panel-env" style="width: 800px; padding: 15px; page-break-after: always;">
+         <ul style="padding: 5px">
+             <li class="text-right">
+                <%= payrolls.function.getPayrollDate(model.payroll_id) %>
+             </li>
+             <li class="text-left">
+                <%= payroll.get('location') %>
+             </li>
+             <li class="text-left">
+                #<%= ++numbering %>&nbsp;&nbsp; <%= employees.function.getFullname(model.emp) %> 
+             </li>
+             <li class="text-left">
+                  <%= positions.function.getName(model.position).toUpperCase() %>
+             </li>
+         </ul>
+         <p style="position: absolute; margin: 20px 0 0 70px" class="text-primary"><small>Less: </small></p> 
+
+         <table class="" style="width: 540px" id="table-breakdown" style="font-size:12px">
+              <tr>
+                  <td>
+                       <%= accounting.formatMoney(model.num_of_days,'',1) %> days X <%= model.rpd %>
+                  </td>
+                  <th class="text-right">
+                      <%= accounting.formatMoney(model.total,'',2) %>
+                      <span style="margin-right: 100px"></span>
+                  </th>
+                  <th class="text-right">500 &nbsp;&nbsp;x&nbsp;&nbsp;</th>
+                  <td><%= model[500] %></td>
+              </tr>
+              <tr>
+                   <td>
+                      C/A
+                   </td>
+                   <th class="text-right">
+                      <%= model.advances %>
+                      <span style="margin-right: 100px"></span>
+                   </th>
+                   <th class="text-right">100 &nbsp;&nbsp;x&nbsp;&nbsp;</th>
+                  <td><%= model[100] %></td>
+              </tr>
+              <tr>
+                   <td>
+                      SSS
+                   </td>
+                   <th class="text-right">
+                      <%= model.sss %>
+                      <span style="margin-right: 100px"></span>
+                   </th>
+                   <th class="text-right">50 &nbsp;&nbsp;x&nbsp;&nbsp;</th>
+                   <td><%= model[50] %></td>
+              </tr>
+              <tr>
+                   <td>
+                       Philhealth
+                   </td>
+                   <th class="text-right">
+                      <%= model.phil %>
+                      <span style="margin-right: 100px"></span>
+                   </th>
+                   <th class="text-right">20 &nbsp;&nbsp;x&nbsp;&nbsp;</th>
+                   <td><%= model[20] %></td>
+              </tr>
+              <tr>
+                   <td>
+                       <span style="color: red">Undertime</span>
+                   </td>
+                   <th class="text-right">
+                      <% if(Number(model.nhl) > 0){ %>
+                      - <%= model.nhl %>
+                      <% }else { %>
+                        0
+                      <% } %>
+                      <span style="margin-right: 100px"></span>
+                   </th>
+                   
+              </tr>
+              <tr>
+                 <td colspan="2" class="text-right">
+                    -------------------------
+                    <span style="margin-right: 100px"></span>
+                 </td>
+                 <th class="text-right">10 &nbsp;&nbsp;x&nbsp;&nbsp;</th>
+                 <td><%= model[10] %></td>
+              </tr>
+              <tr>  
+                   <td class="text-center"></td>
+                   <th class="text-right">
+                       <%= accounting.formatMoney(model.net,'Php ',2) %>
+                       <span style="margin-right: 100px"></span>
+                   </th>
+                    <th class="text-right">5 &nbsp;&nbsp;x&nbsp;&nbsp;</th>
+                    <td><%= model[5] %></td>
+              </tr>
+              <tr>  
+                   <td class="text-center"></td>
+                    <th class="text-right">
+                       
+                    </th>
+                    <th class="text-right">1 &nbsp;&nbsp;x&nbsp;&nbsp;</th>
+                    <td><%= model[1] %></td>
+              </tr>
+              
+         </table>
+
+    </div>                               
+</center>
+
+<% }); %>

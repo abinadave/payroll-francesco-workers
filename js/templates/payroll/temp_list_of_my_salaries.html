@@ -1,0 +1,14 @@
+<% library.forEach(function(model) { %>
+<% console.log(model);  %>
+  <tr>
+     <td><%= payrolls.function.getPayrollDate(model.payroll_id) %></td>
+     <td><%= model.num_of_days %></td>
+     <td><%= model.advances %></td>
+     <td><%= model.sss %></td>
+     <td><%= model.phil %></td>
+     <td><%= model.rice_allowance %></td>
+     <td><%= model.total %></td>
+     <td><%= model.net %></td>
+     <td><a href="#viewAttendance" class="text-info"><strong>attendance</strong></a></td>
+  </tr>
+<% }); %>

@@ -1,0 +1,49 @@
+                            <div class="modal fade" id="modalTablePayrollempsRemoved" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" style="width: 80%" id="div-modalTablePayrollemps">
+                                    <div class="modal-content">
+
+                                        <div class="modal-header text-right" >
+                                           <div class="">
+                                                <button type="button" class="btn btn-default btn-xs " data-dismiss="modal">Close</button>
+                                           </div>
+                                        </div>
+                                        
+                                        <div id="body-to-print" class="modal-body" style="font-size: 14px">
+                                        <div class="text-center">
+                                        <small><h6 style="font-size: 14px">PAYROLL: <%= model.location %>
+                                                 &nbsp;&nbsp;<span id="table-payrollemps-location"></span><br/>
+                                                 FOR THE PERIOD: &nbsp;&nbsp;<span id="table-payrollemps-period"><%= model.date_from %> - <%= model.date_to %></span>
+                                           </h6></small>
+                                        </div>
+
+                                               <table id="table-payroll-emps" style="font-size: 12px" class="table table-hover table-bordered table-condensed">
+                                                    <thead>
+                                                        <tr>
+                                                             <th width="1">No</th>
+                                                             <th style="text-align: left" width="">Employee Name</th>
+                                                             <th style="text-align: center" width="">Designation</th>
+                                                             <th width="60" style="text-align: center" width="">No. of days</th>
+<!--                                                         <th id="this-allowance" class="r-a" style="text-align: center; display: none" width="40">Rice/Allow.</th>
+ -->                                                         <th width="60" style="text-align: center" width="">Rate per day</th>
+                                                             <th id="this-allowance" style="text-align: right" width="">Total</th>
+                                                             <th id="this-allowance" style="text-align: center"width="">Advances</th>
+                                                             <th id="this-allowance" style="text-align: center"width="">SSS</th>
+                                                             <th id="this-allowance" style="text-align: center"width="">Phil</th>
+                                                             <th id="this-allowance" style="text-align: center" width="">Undertime</th>
+                                                             <th style="text-align: right" width="">Net Amount</th>
+                                                             <th width="1" id="emp-no">No</th>
+                                                             <th id="remove" class="signature" width="">Signature</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="list-of-payrollemps-removed-payrolls" class="" style="cursor: pointer"></tbody>
+                                               </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                           
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                    
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
