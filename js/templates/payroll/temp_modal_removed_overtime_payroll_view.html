@@ -10,7 +10,7 @@
                                         
                                         <div id="body-to-print" class="modal-body" style="font-size: 14px">
                                         <div class="text-center">
-                                        <small><h6 style="font-size: 14px">PAYROLL: <%= model.location %>
+                                        <small><h6 style="font-size: 14px">PAYROLL: <b class="text-danger" style="font-weight: bolder"><%= model.location %></b>
                                                  &nbsp;&nbsp;<span id="table-payrollemps-location"></span><br/>
                                                  FOR THE PERIOD: &nbsp;&nbsp;<span id="table-payrollemps-period"><%= model.date_from %> - <%= model.date_to %></span>
                                            </h6></small>
@@ -21,7 +21,7 @@
                                                         <tr>
                                                              <th width="1">No</th>
                                                              <th style="text-align: left" width="">Employee Name</th>
-                                                             <th style="text-align: center" width="">Designation</th>
+                                                             <th style="text-align: center" width="">Position</th>
                                                              <th width="60" style="text-align: center" width="">No. of days</th>
 <!--                                                         <th id="this-allowance" class="r-a" style="text-align: center; display: none" width="40">Rice/Allow.</th>
  -->                                                         <th width="60" style="text-align: center" width="">Rate per day</th>

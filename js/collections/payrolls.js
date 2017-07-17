@@ -115,7 +115,8 @@ define(
                                 details.total = parseFloat(details.rpd) * parseFloat(model.get('num_of_days'));
                                 details.net = parseFloat(model.get('total')) - parseFloat(model.get('advances')) - parseFloat(model.get('sss')) - parseFloat(model.get('phil'));
                                 details.rice_allowance = 0.0;
-                                
+                                details.ot_hrs = model.get('ot_hrs');
+                                details.ot_mins = model.get('ot_mins');
                                 if (model.get('rice_allowance') == 1) {
                                     var total_rice_allowance = parseFloat(rice.get('price')) * parseFloat(model.get('num_of_days'));
                                     details.net += total_rice_allowance;
@@ -124,7 +125,7 @@ define(
                                 }else {
                                     details.has_allowance = 0;
                                 }
-
+                                console.log(model.attributes);
                                   $.post('ajax/save/save_payrollemps.php', 
                                     {   values: model.attributes, 
                                         payroll_id: id, 
@@ -148,7 +149,9 @@ define(
                                             rice_allowance: details.rice_allowance, 
                                             has_allowance: details.has_allowance, 
                                             total: details.total, 
-                                            net: details.net 
+                                            net: details.net ,
+                                            ot_hrs: model.get('ot_hrs'),
+                                            ot_mins: model.get('ot_mins')
                                         });
 
                                         payrollemps.add(payrollemp);

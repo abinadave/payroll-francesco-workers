@@ -60,7 +60,7 @@ define(
                     minTimesTotal = paymentForMinutes + total;
                     grandTotal += minTimesTotal;
                 }else if(hrs !== 0 && min === 0) {
-                    formatedMoney = accounting.formatNumber(total); 
+                    formatedMoney = Accounting.formatNumber(total); 
                     grandTotal += total;
                 }else if(hrs !== 0 && min !== 0){
                     ratePerMin = rph / 60;

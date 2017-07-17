@@ -1,6 +1,7 @@
 <% library.forEach(function(model) { %>
 <tr>
      <td><input type="checkbox" value="<%= model.id %>"></td>
+     <td><%= moment(model.true_date).format('MMMM DD, YYYY hh:mm') %></td>
      <td class="text-center"><a href="#Payroll/restore/<%= model.id %>" class="text-danger"><span class="glyphicon glyphicon-remove"></span></a></td>
      <td class="text-center"><a href="#Payroll/view/<%= model.id %>" class="text-info"><span class="glyphicon glyphicon-folder-open"></a></td>
      <td class="text-center"><a href="#Attendance/view/<%= model.id %>">attendance</a></td>

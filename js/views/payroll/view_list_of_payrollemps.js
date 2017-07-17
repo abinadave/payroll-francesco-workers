@@ -25,12 +25,36 @@ define(
         	render: function(id){
         	    var self = this;
                 self.$el.empty();
-                var output = self.template({'payroll_id': id, 'accounting': acc, 'library': self.collection.toJSON()});
+                var output = self.template({'payroll_id': id, 'accounting': acc, 'library': self.collection.toJSON(), 'self': self});
                 self.$el.append(output);
                 self.init(id);
     	        return self;
         	},
-    
+            
+            getOtHrs(payrollemp){
+                let self = this;
+                let rph = Number(payrollemp.rpd) / 8;
+                if (Number(payrollemp.ot_hrs) === 0) {
+                    return 0;
+                }else {
+                    let totalOtHrs = Number(payrollemp.ot_hrs) * rph;
+                    return Number(totalOtHrs);
+                }
+            },
+
+            getOtMins(payrollemp){
+                let self = this;
+                let rpd = Number(payrollemp.rpd);
+                let rph = Number(rpd) / 8;
+                let rpm = Number(rph) / 60;
+                if (Number(payrollemp.ot_mins) === 0) {
+                    return 0;
+                }else {
+                    let totalOtMins = Number(payrollemp.ot_mins) * rpm;
+                    return parseFloat(totalOtMins);
+                }
+            },
+
         	init: function(payroll_id){
                 var self = this;
                 $(function(){

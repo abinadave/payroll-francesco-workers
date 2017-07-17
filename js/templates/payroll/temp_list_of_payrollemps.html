@@ -9,11 +9,14 @@
 <% var table_net = 0.0, table_sss = 0.0, table_phil = 0.0, table_advance = 0.0, table_allowance = 0.0, total = 0.0  %>
 <% var breakdown = [1000 ,500 ,200 ,100 ,50 ,20 ,10 ] %>
 <% var one_thousand = 0, five_hundred = 0, two_hundred = 0, one_hundred = 0, fifty = 0,  twenty = 0, ten = 0, five = 0 %>
+<% var t_ot_hrs = 0, t_ot_mins = 0 %>
 
 <% library.forEach(function(model) { %>
 <% var empNet = Math.floor(model.net) %>
 <tr id="<%= model.payroll_id %>-<%= model.emp %>">
 <% var salary = Number(model.num_of_days) * Number(model.rpd) %>
+<% salary += Number(self.getOtHrs(model)) %>
+<% salary += Number(self.getOtMins(model)) %>
 
         <td style="text-align: center"><%= ++numbering %></td>
         <td style="text-align: left"><%= employees.function.getFullname(model.emp) %></td>
@@ -21,12 +24,31 @@
         <td style="text-align: center"><%= attendances.function.getNumOfDays(model.num_of_days) %></td>
        
         <td style="text-align: center"><%= model.rpd %></td>
-        <td id="allowance" style="text-align: right"><%= accounting.formatMoney(salary, " ", 2) %></td>
-       <!--  <td id="allowance" style="text-align: center"><%= accounting.formatMoney(model.advances, " ", 2) %></td>
-        <td id="allowance" style="text-align: center"><%= accounting.formatMoney(model.sss, " ", 2) %></td>
-        <td id="allowance" style="text-align: center"><%= accounting.formatMoney(model.phil, " ", 2) %></td>
-        <td id="allowance" style="text-align: center"><%= payrollemps.function.getUndertime(model) %></td> -->
-        <!-- <td style="text-align: right"><%= accounting.formatMoney(empNet, " ", 2) %></td> -->
+        <td style="text-align: left">
+         <% if(Number(model.ot_hrs) > 0) { %>
+           <b><%= model.ot_hrs %></b>
+           &nbsp;&nbsp;
+           equiv. to
+           &nbsp;&nbsp; 
+           <b><%= accounting.formatMoney(self.getOtHrs(model),'P ', 2) %></b>
+         <% } else { %> 
+            0
+         <% } %>
+        </td>
+        <td style="text-align: left">
+          <% if(Number(model.ot_hrs) > 0) { %>
+           
+           <b><%= model.ot_mins %></b>
+           &nbsp;&nbsp;
+           equiv. to
+           &nbsp;&nbsp; 
+           <b><%= accounting.formatMoney(self.getOtMins(model),'P ', 2) %></b>
+          <% } else { %> 
+            0
+         <% } %> 
+        </td>
+        <td class="text-primary" id="allowance" style="text-align: right;font-weight: bolder"><%= accounting.formatMoney(salary, " ", 2) %></td>
+        
         <td style="text-align: center"><%= numbering %></td>
         <td id="remove" class="text-center"><a style="cursor: pointer"><span class="text-danger glyphicon glyphicon-remove"></span></a></td>
 
@@ -44,9 +66,9 @@
 
 <% numbering = 0 %>
 
-<tr style="text-align:right; font-weight: bolder; font-size: 15px">
-     <td colspan="5"  style="text-align: center" id="th-colspan">Total</td>
-     <td id="allowance"><span class="pull-left"></span><%= accounting.formatMoney(total, " ", 2) %></td>
+<tr class="text-danger" style="text-align:right; font-weight: bolder; font-size: 16px">
+     <td colspan="7"  style="text-align: center" id="th-colspan">PAYROLL TOTAL</td>
+     <td id="allowance"><span class="pull-left"></span><%= accounting.formatMoney(total, "P ", 2) %></td>
      <!-- <td id="allowance" class="text-center"><%= accounting.formatMoney(t_advances, " ", 2) %></td>
      <td id="allowance" class="text-center"><%= accounting.formatMoney(t_sss, " ", 2) %></td>
      <td id="allowance" class="text-center"><%= accounting.formatMoney(t_phil, " ", 2) %></td>

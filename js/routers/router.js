@@ -370,11 +370,11 @@ function(
 							removed_overtimes.remove(resp.id);
 							router.alertify_success('Successfully restore');
 						}).fail(function(xhr){
-							console.log('error on restoring overtime, error type: '+xhr.status);
+							// console.log('error on restoring overtime, error type: '+xhr.status);
 						});
 					};
 				}).fail(function(xhr){
-					alert('error type: '+xhr.status);
+					// alert('error type: '+xhr.status);
 				});
 
 			};
@@ -555,7 +555,7 @@ function(
 				$('#sign-in-as').text(data);
 				self.getNumberOfUsers();
 			}).fail(function(xhr){
-				alert('error type: '+xhr.status);
+				// alert('error type: '+xhr.status);
 			});
 		},
 
@@ -584,7 +584,7 @@ function(
 				accounts.subviews.initImageUpdate();
 				accounts.function.subscribe_active_users('account'+accounts.currentSession);	
 			}).fail(function(xhr){
-				alert('error type: '+xhr.status);
+				// alert('error type: '+xhr.status);
 			});
 		},
 
@@ -728,7 +728,7 @@ function(
 									rice.set({price: str});
 								}
 							}).fail(function(xhr){
-								alert('error type: '+xhr.status);
+								// alert('error type: '+xhr.status);
 							});
 						}else {
 							alert('Invalid input');

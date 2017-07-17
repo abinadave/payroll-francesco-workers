@@ -16,7 +16,7 @@ define(
             }).success(function(json){
                 rice.set({price: json})
             }).fail(function(xhr){
-                alert('error type: '+xhr.status);
+                // alert('error type: '+xhr.status);
             });
         },
 

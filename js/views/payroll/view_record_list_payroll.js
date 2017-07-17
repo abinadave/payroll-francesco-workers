@@ -4,8 +4,9 @@ define(
 		'backbone',
 		'text!templates/payroll/temp_record_list_payroll.html',
         'libs/accounting.min',
-        'libs/backbone.obscura'
-	],  function(_, Backbone, template, acc, Obscura) {
+        'libs/backbone.obscura',
+        'moment'
+	],  function(_, Backbone, template, acc, Obscura, moment) {
    
     var ViewRecordListPayroll = Backbone.View.extend({
     
@@ -28,7 +29,7 @@ define(
                 self.$el.empty();
                 var proxy = new Obscura(self.collection);
                 self.collection = proxy.setSort('true_date', 'desc');
-                var output = self.template({'library': self.collection.toJSON(), 'accounting': acc });
+                var output = self.template({'library': self.collection.toJSON(), 'accounting': acc, 'moment': moment});
                 self.$el.append(output);
                 self.init(self.collection.length);
     	        return self;

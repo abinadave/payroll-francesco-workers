@@ -4,9 +4,9 @@
 	*/
 	class Database
 	{
-		private static $dsn = 'mysql:host=localhost;dbname=payroll_francesco_workers',
+		private static $dsn = 'mysql:host=localhost;dbname=francesco_payroll',
 		$user = 'root',
-		$pass = "Ethanabina2016",
+		$pass = "",
 		$pdo;
 
 		function __construct()

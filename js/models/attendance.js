@@ -28,6 +28,16 @@ define(
                     attendances.function.redisplayTotality();
                 }
 
+                if (this.hasChanged('ot_hrs')) {
+                   attendances.function.otHrsChanged(this.get('id'), this.get('ot_hrs'));
+                   attendances.function.redisplayTotality();
+                }
+
+                if (this.hasChanged('ot_mins')) {
+                   attendances.function.otMinsChanged(this.get('id'), this.get('ot_mins'));
+                   attendances.function.redisplayTotality();
+                }
+
                 if (this.hasChanged('sss')) {
                     attendances.function.sssChanged(this.get('id'), this.get('sss'));
                     attendances.function.redisplayTotality();
@@ -76,6 +86,8 @@ define(
             to: 'none',
             advances: 0,
             sss: 0,
+            ot_hrs: 0,
+            ot_mins: 0,
             phil: 0,
             rice_allowance: 0,
             nod: '0'

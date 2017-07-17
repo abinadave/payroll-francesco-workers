@@ -14,14 +14,14 @@ class medoo
 
 	protected $charset = 'utf8';
 
-	protected $database_name = 'payroll_francesco_workers';
+	protected $database_name = 'francesco_payroll';
 
 	// For MySQL, MariaDB, MSSQL, Sybase, PostgreSQL, Oracle
 	protected $server = 'localhost';
 
 	protected $username = "root";
 
-	protected $password = "Ethanabina2016";
+	protected $password = "";
 
 	// For SQLite
 	protected $database_file;

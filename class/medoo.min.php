@@ -3,10 +3,10 @@
 class medoo{
 	protected $database_type = 'mysql';
 	protected $charset = 'utf8';
-	protected $database_name = 'payroll_francesco_workers';
+	protected $database_name = 'francesco_payroll';
 	protected $server = 'localhost';
 	protected $username = 'root';
-	protected $password = 'Ethanabina2016';
+	protected $password = '';
 	protected $database_file;
 	protected $socket;
 	protected $port;

@@ -8,8 +8,7 @@ define(
 
     	initialize: function(){
     		this.on('change', function(){
-    			console.log(this.changedAttributes());
-                
+
     		});
     	}
 

@@ -20,10 +20,6 @@ define(['underscore','backbone','moment'], function(_, Backbone, moment) {
                return "work hours is required";
             }
 
-            if (!attrs.location_id) {
-               return "location is required";
-            }
-
             if(moment(attrs.date).isValid() == false) {
             	return 'invalid date';
             }

@@ -102,6 +102,7 @@ define(['underscore','backbone','text!templates/payroll/overtime/temp_table_pane
                         var proceed = true;
                         self.$el.find('tbody').find('input[type="text"]').each(function(index, el) {
                             if ($(this).val() == '') {
+                                    
                                 proceed = false;
                             };
                         });
