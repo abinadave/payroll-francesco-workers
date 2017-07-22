@@ -425,8 +425,6 @@ define(
                     undertime += parseFloat(model.get('undertime'));
                 });
 
-                console.log('sum of ot_mins: ' + ot_mins);
-
                 $table.find('#payroll-advances').text(accounting.formatMoney(advances, " ", 2)).end()
                       .find('#payroll-overtime-hrs').text(accounting.formatMoney(ot_hrs, " ", 0)).end()
                       .find('#payroll-overtime-mins').text(accounting.formatMoney(ot_mins, " ", 0)).end()

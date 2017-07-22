@@ -55,6 +55,13 @@ define(
                 }
             },
 
+            getUndertimeTotal(payrollemp){
+                let self = this;
+                let rpd = Number(payrollemp.rpd);
+                let rph = Number(rpd) / 8;
+                return Number(rph) * Number(payrollemp.undertime);
+            },
+
         	init: function(payroll_id){
                 var self = this;
                 $(function(){

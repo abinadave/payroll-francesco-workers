@@ -59,9 +59,9 @@ session_start();
 		}
 
 		public static function savePayrollEmps($model, $data){
-			$sql = "INSERT INTO payrollemps SET payroll_id = ?, emp = ?, position = ?, num_of_days = ?, rpd = ?, advances = ?, sss = ?, phil = ?, rice_allowance = ?, has_allowance = ?, total = ?, net = ?, ot_hrs = ?, ot_mins = ?";
+			$sql = "INSERT INTO payrollemps SET payroll_id = ?, emp = ?, position = ?, num_of_days = ?, rpd = ?, advances = ?, sss = ?, phil = ?, rice_allowance = ?, has_allowance = ?, total = ?, net = ?, ot_hrs = ?, ot_mins = ?, undertime = ?";
 			$query = self::$handler->prepare($sql);
-			$query->execute(array( $model['payroll_id'], $model['id'], $data['position'], $model['num_of_days'], $data['rpd'], $model['advances'], $model['sss'], $model['phil'], $data['rice_allowance'], $data['has_allowance'], $data['total'], $data['net'], $data['ot_hrs'], $data['ot_mins'] ));
+			$query->execute(array( $model['payroll_id'], $model['id'], $data['position'], $model['num_of_days'], $data['rpd'], $model['advances'], $model['sss'], $model['phil'], $data['rice_allowance'], $data['has_allowance'], $data['total'], $data['net'], $data['ot_hrs'], $data['ot_mins'], $data['undertime'] ));
 			if ($query) {
 				return true;
 			}

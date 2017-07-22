@@ -117,6 +117,7 @@ define(
                                 details.rice_allowance = 0.0;
                                 details.ot_hrs = model.get('ot_hrs');
                                 details.ot_mins = model.get('ot_mins');
+                                details.undertime = model.get('undertime');
                                 if (model.get('rice_allowance') == 1) {
                                     var total_rice_allowance = parseFloat(rice.get('price')) * parseFloat(model.get('num_of_days'));
                                     details.net += total_rice_allowance;
@@ -151,7 +152,8 @@ define(
                                             total: details.total, 
                                             net: details.net ,
                                             ot_hrs: model.get('ot_hrs'),
-                                            ot_mins: model.get('ot_mins')
+                                            ot_mins: model.get('ot_mins'),
+                                            undertime: model.get('undertime')
                                         });
 
                                         payrollemps.add(payrollemp);
