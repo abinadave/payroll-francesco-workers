@@ -29,12 +29,60 @@ define(
                 self.$el.empty();
                 var proxy = new Obscura(self.collection);
                 self.collection = proxy.setSort('true_date', 'desc');
-                var output = self.template({'library': self.collection.toJSON(), 'accounting': acc, 'moment': moment});
+                var output = self.template({'library': self.collection.toJSON(), 'accounting': acc, 'moment': moment,
+                    'self': self });
                 self.$el.append(output);
                 self.init(self.collection.length);
     	        return self;
         	},
-    
+
+            getTotalOfpayroll(payroll){
+                let self = this;
+                let rsPayrollemps = _.where(payrollemps.toJSON(), { payroll_id: payroll.id });
+                if (rsPayrollemps.length) {
+                    var over_all_total = 0.0;
+                    var total = 0.0;
+                    var advances = 0.0;
+                    var sss = 0.0;
+                    var ot_hrs = 0.0;
+                    var ot_mins = 0.0;
+                    var undertime = 0.0;
+                    var phil = 0.0;
+                    let rpd = 0;
+                    let rph = 0;
+                    let totalOverTimeHrs = 0;
+                    let totalOvertimeMins = 0;
+                    let totalUndertimeDeductions = 0;
+                    rsPayrollemps.forEach(function(model) {
+                        var emp = employees.get(model.emp);
+                        var total = parseFloat(emp.get('rpd')) * parseFloat(model.num_of_days);
+                        
+                        rph = Number(emp.get('rpd')) / 8;
+                        rpm = Number(rph) / 60;
+
+                        totalOverTimeHrs = Number(rph) * Number(model.ot_hrs);
+                        totalOvertimeMins = Number(rpm) * Number(model.ot_mins);
+                        totalUndertimeDeductions = Number(rph) * Number(model.undertime);
+
+                        total += Number(totalOverTimeHrs);
+                        total += Number(totalOvertimeMins);
+                        total = Number(total) - Number(totalUndertimeDeductions);
+
+                        over_all_total += total;
+
+                        ot_hrs += parseFloat(totalOverTimeHrs);
+                        ot_mins += parseFloat(totalOvertimeMins);  
+                        undertime += parseFloat(totalUndertimeDeductions);
+                    });
+                    return {
+                        net: over_all_total,
+                        ot_hrs: ot_hrs,
+                        ot_mins: ot_mins,
+                        undertime: undertime
+                    };
+                }else { return 0; };
+            },
+
         	init: function(length){
                 var self = this;        
 

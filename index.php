@@ -1,4 +1,5 @@
 <?php
+	date_default_timezone_set('Asia/Manila');
 	include_once 'Slim/Slim/Slim.php';
     include_once 'class/class.functions.php';
     
