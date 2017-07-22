@@ -28,6 +28,8 @@ define(
                     attendances.function.redisplayTotality();
                 }
 
+
+
                 if (this.hasChanged('ot_hrs')) {
                    attendances.function.otHrsChanged(this.get('id'), this.get('ot_hrs'));
                    attendances.function.redisplayTotality();
@@ -36,6 +38,11 @@ define(
                 if (this.hasChanged('ot_mins')) {
                    attendances.function.otMinsChanged(this.get('id'), this.get('ot_mins'));
                    attendances.function.redisplayTotality();
+                }
+
+                if (this.hasChanged('undertime')) {
+                    attendances.function.undertimeChanged(this.get('id'), this.get('undertime'));
+                    attendances.function.redisplayTotality();
                 }
 
                 if (this.hasChanged('sss')) {
@@ -88,6 +95,7 @@ define(
             sss: 0,
             ot_hrs: 0,
             ot_mins: 0,
+            undertime: 0,
             phil: 0,
             rice_allowance: 0,
             nod: '0'

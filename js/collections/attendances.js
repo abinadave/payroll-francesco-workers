@@ -196,7 +196,8 @@ define(
                 });
                 return overall;
             },
-
+            
+            
             advancesChanged: function(id, value){
                 var $table = $('#table-payroll');
                 var attendance = attendances.get(id), employee = employees.get(id), own_salary = 0.0, td = $('#net-amount-'+id), over_all_total = 0.0, deduct_advances = 0.0;
@@ -225,7 +226,43 @@ define(
                 return this;
                
             },
-            
+
+            undertimeChanged: function(id, value){
+                // alert('changed undertime: ' + value);
+
+                var $table = $('#table-payroll');
+                var attendance = attendances.get(id), 
+                employee = employees.get(id),
+                own_salary = 0.0, 
+                td = $('#net-amount-'+id), 
+                over_all_total = 0.0, 
+                deduct_advances = 0.0;
+
+                let rpd = employee.get('rpd');
+                let ratePerHour = (Number(rpd) / 8);
+                let ratePerMin = Number(ratePerHour) / 60;
+
+                let totalOverTimeHrs = ( Number(rpd) / 8) * Number(attendance.get('ot_hrs'));
+                let totalOvertimeMins = ratePerMin * Number(attendance.get('ot_mins'));
+                let totalUndertimeDeductions = Number(ratePerHour) * Number(value);
+
+                own_salary = parseFloat(attendance.get('num_of_days')) * parseFloat(employee.get('rpd'));
+                
+                own_salary = Number(own_salary) + Number(totalOverTimeHrs);
+                own_salary = Number(own_salary) + Number(totalOvertimeMins);
+                own_salary = Number(own_salary) - Number(totalUndertimeDeductions);
+
+                if (attendance.get('rice_allowance') == 1) {
+                    var rice_times_nod = parseFloat(attendance.get('num_of_days')) * parseFloat(rice.get('price'));
+                    own_salary += rice_times_nod;
+                };
+
+                td.text(accounting.formatMoney(own_salary," ", 2));
+                
+               //this.redisplayTotality();
+                return this;
+            },
+
             otMinsChanged: function(id, value){
                 // alert('changed')
                 var $table = $('#table-payroll');
@@ -242,11 +279,13 @@ define(
 
                 let totalOverTimeHrs = ( Number(rpd) / 8) * Number(attendance.get('ot_hrs'));
                 let totalOvertimeMins = ratePerMin * Number(value);
+                let totalUndertimeDeductions = Number(ratePerHour) * Number(attendance.get('undertime'));
 
                 own_salary = parseFloat(attendance.get('num_of_days')) * parseFloat(employee.get('rpd'));
                 
-                own_salary += parseFloat(totalOverTimeHrs);
-                own_salary += parseFloat(totalOvertimeMins);
+                own_salary = Number(own_salary) + Number(totalOverTimeHrs);
+                own_salary = Number(own_salary) + Number(totalOvertimeMins);
+                own_salary = Number(own_salary) - Number(totalUndertimeDeductions);
 
                 if (attendance.get('rice_allowance') == 1) {
                     var rice_times_nod = parseFloat(attendance.get('num_of_days')) * parseFloat(rice.get('price'));
@@ -275,14 +314,14 @@ define(
 
                 let totalOverTimeHrs = ( Number(rpd) / 8) * Number(value);
                 let totalOvertimeMins = ratePerMin * Number(attendance.get('ot_mins'));
-                console.log('total overtime hrs: ' + totalOverTimeHrs);
+                let totalUndertimeDeductions = Number(ratePerHour) * Number(attendance.get('undertime'));
+
                 own_salary = parseFloat(attendance.get('num_of_days')) * parseFloat(employee.get('rpd'));
-                own_salary -= parseFloat(attendance.get('advances'));
-                own_salary -= parseFloat(attendance.get('sss'));
                 
-                own_salary += parseFloat(totalOverTimeHrs);
-                own_salary += parseFloat(totalOvertimeMins);
-                
+                own_salary = Number(own_salary) + Number(totalOverTimeHrs);
+                own_salary = Number(own_salary) + Number(totalOvertimeMins);
+                own_salary = Number(own_salary) - Number(totalUndertimeDeductions);
+
                 if (attendance.get('rice_allowance') == 1) {
                     var rice_times_nod = parseFloat(attendance.get('num_of_days')) * parseFloat(rice.get('price'));
                     own_salary += rice_times_nod;
@@ -306,7 +345,6 @@ define(
                 own_salary -= parseFloat(attendance.get('sss'));
 
                 own_salary += parseFloat(totalOverTimeHrs);
-
                     if (attendance.get('rice_allowance') == 1) {
                         var rice_times_nod = parseFloat(attendance.get('num_of_days')) * parseFloat(rice.get('price'));
                         own_salary += rice_times_nod;
@@ -351,11 +389,13 @@ define(
                 var sss = 0.0;
                 var ot_hrs = 0.0;
                 var ot_mins = 0.0;
+                var undertime = 0.0;
                 var phil = 0.0;
                 let rpd = 0;
                 let rph = 0;
                 let totalOverTimeHrs = 0;
                 let totalOvertimeMins = 0;
+                let totalUndertimeDeductions = 0;
                 attendances.forEach(function(model) {
                     var emp = employees.get(model.get('id'));
                     var total = parseFloat(emp.get('rpd')) * parseFloat(model.get('num_of_days'));
@@ -365,9 +405,11 @@ define(
 
                     totalOverTimeHrs = Number(rph) * Number(model.get('ot_hrs'));
                     totalOvertimeMins = Number(rpm) * Number(model.get('ot_mins'));
+                    totalUndertimeDeductions = Number(rph) * Number(model.get('undertime'));
 
                     total += Number(totalOverTimeHrs);
                     total += Number(totalOvertimeMins);
+                    total = Number(total) - Number(totalUndertimeDeductions);
 
                     if (model.get('rice_allowance') == 1) {
                         var rice_times_nod = parseFloat(model.get('num_of_days')) * parseFloat(rice.get('price'));
@@ -380,12 +422,15 @@ define(
                     phil += parseFloat(model.get('phil'));
                     ot_hrs += parseFloat(model.get('ot_hrs'));
                     ot_mins += parseFloat((model.get('ot_mins')));  
+                    undertime += parseFloat(model.get('undertime'));
                 });
 
                 console.log('sum of ot_mins: ' + ot_mins);
 
                 $table.find('#payroll-advances').text(accounting.formatMoney(advances, " ", 2)).end()
                       .find('#payroll-overtime-hrs').text(accounting.formatMoney(ot_hrs, " ", 0)).end()
+                      .find('#payroll-overtime-mins').text(accounting.formatMoney(ot_mins, " ", 0)).end()
+                      .find('#payroll-undertime').text(accounting.formatMoney(undertime, " ", 0)).end()
                       .find('#payroll-phil').text(accounting.formatMoney(phil, " ", 2)).end()
                       .find('#over-all-total').text(accounting.formatMoney(over_all_total," ", 2)).end()
                       .find('#over-all-total-rounded').text(accounting.formatMoney(Math.round(over_all_total)," ",0)).end();
@@ -618,7 +663,42 @@ define(
                                  attendance.set({advances: 0});
                                 // $('#net-amount-'+td_id).text(acc.formatMoney(salary," ",2));
                              }
-                             
+                        
+                        /* emp-overtime-undertime */
+                        }else if (_.isEqual(id,'emp-overtime-undertime')) {
+                            //for advances..
+
+                            let class3 = classes.split(' ')[2];
+                            let emp_id = class3.split('-').pop();
+                            var attendance = attendances.get(emp_id);
+                            var employee = employees.get(emp_id);
+
+                            if (value != '') {
+                                if (!$.isNumeric(value)) {
+
+                                    //if string..
+                                    alert('Invalid input');
+                                    $(this).val(''); 
+                                    attendance.set({undertime: 0});
+
+                                }else {
+
+                                    // if number..
+                                     if (value > salary) {
+                                         $(this).val(''); 
+                                         alert('Invalid');
+                                        attendance.set({undertime: 0});
+                                     }else {                         
+                                        attendance.set({undertime: value});
+                                     }
+
+                                }
+                                
+                            }else {
+                                attendance.set({undertime: 0});
+                            }
+
+
                         }else if (_.isEqual(id,'emp-overtime-hrs')) {
                             //for advances..
 

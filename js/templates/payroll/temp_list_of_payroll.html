@@ -28,8 +28,11 @@
        <td style="font-weight: bolder font-size: 16px; text-align: center">
           <input type="number" id="emp-overtime-mins" class="form-control input-sm input-overtime-mins-<%= model.get('id') %>" style="width: 100px; height: 27px; font-size: 17px" />
        </td>
+
+       <td style="font-weight: bolder font-size: 16px; text-align: center">
+          <input type="number" id="emp-overtime-undertime" class="form-control input-sm input-undertime-<%= model.get('id') %>" style="width: 100px; height: 27px; font-size: 17px" />
+       </td>
       
-       
        <td style="font-weight: bolder; font-size: 16px; text-align: right" id="net-amount-<%= model.get('id') %>">
           <%= accounting.formatMoney(total, " ", 2) %>
        </td>
@@ -43,10 +46,11 @@
      <td style="text-align: right; font-weight: bolder" id="payroll-total"><%= accounting.formatMoney(over_all_total," ",2) %></td>
      <td style="text-align: center; font-weight: bolder" id="payroll-overtime-hrs">0</td>
      <td style="text-align: center; font-weight: bolder" id="payroll-overtime-mins">0</td>
+     <td style="text-align: center; font-weight: bolder" id="payroll-undertime">0</td>
      <td style="font-weight: bolder">Php <span class="pull-right" id="over-all-total"><%= accounting.formatMoney(over_all_total," ",2) %></span></td>
 </tr>
 
 <tr style="font-size: 18.5px">
-    <td colspan="8"></td>
+    <td colspan="9"></td>
     <td style="text-align: right; font-weight: bolder" class="text-danger" id="over-all-total-rounded"><%= accounting.formatMoney(Math.round(over_all_total)," ",0) %></td>
 </tr>
